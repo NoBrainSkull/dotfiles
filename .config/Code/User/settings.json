@@ -1,0 +1,29 @@
+{
+    "explorer.confirmDragAndDrop": false,
+    "editor.tabSize": 2,
+    "window.titleBarStyle": "custom",
+    "git.enableSmartCommit": true,
+    "explorer.confirmDelete": false,
+    "breadcrumbs.enabled": true,
+    "editor.minimap.enabled": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "editor.fontLigatures": true,
+    "window.zoomLevel": 0,
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.colorTheme": "Shades of Purple",
+    "[elixir]": {
+        "editor.defaultFormatter": "JakeBecker.elixir-ls"
+    },
+    "git.autofetch": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "sync.autoUpload": true,
+    "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "files.exclude": {
+        "**/.expo*": true
+    },
+    "tabnine.experimentalAutoImports": true,
+    "sync.autoDownload": true
+}
