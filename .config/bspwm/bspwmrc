@@ -1,7 +1,7 @@
 #! /bin/sh
 
 start-if-not-running sxhkd
-start-if-not-running configure-monitorsdy
+start-if-not-running configure-monitors
 start-if-not-running no-beep
 
 case $(hostname | awk '{print tolower($0)}') in

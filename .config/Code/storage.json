@@ -2,6 +2,7 @@
     "telemetry.machineId": "2484b17b17bdbfdeb22350346b16148b964e4a06be067f341fe94a107e8870f5",
     "openedPathsList": {
         "workspaces3": [
+            "file:///home/blue/sources/gtk-app-test",
             "file:///home/blue/sources/data-migrator",
             "file:///home/blue/sources/majora-admin",
             "file:///home/blue/sources/majora-core-evaluations",
@@ -100,8 +101,7 @@
             "file:///home/blue/sources/boushao-app",
             "file:///home/blue/sources/karbon-poc",
             "file:///home/blue/sources/impactapi",
-            "file:///home/blue/sources/ml-core-quiz",
-            "file:///home/blue/sources/actinuum/poc"
+            "file:///home/blue/sources/ml-core-quiz"
         ],
         "files2": [
             "file:///home/blue/.zaliases",
@@ -207,54 +207,20 @@
         ]
     },
     "theme": "vs-dark",
-    "themeBackground": "#2d2b55",
+    "themeBackground": "#1e1e1e",
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/blue/sources/majora-admin",
-            "backupPath": "/home/blue/.config/Code/Backups/d9040c0aa0ba0508afe1da8c0af61da1",
+            "folder": "file:///home/blue/sources/gtk-app-test",
+            "backupPath": "/home/blue/.config/Code/Backups/4822bac976ab867f70f6c687a4d33524",
             "uiState": {
                 "mode": 1,
-                "x": 2620,
-                "y": 1126,
-                "width": 1210,
-                "height": 636
+                "x": 2575,
+                "y": 1053,
+                "width": 1306,
+                "height": 1410
             }
         },
-        "openedWindows": [
-            {
-                "folder": "file:///home/blue/sources/majora-core-evaluations",
-                "backupPath": "/home/blue/.config/Code/Backups/09df2272632b678bb89b02760f5be8f8",
-                "uiState": {
-                    "mode": 1,
-                    "x": 3850,
-                    "y": 1126,
-                    "width": 1210,
-                    "height": 1292
-                }
-            },
-            {
-                "folder": "file:///home/blue/sources/majora-admin",
-                "backupPath": "/home/blue/.config/Code/Backups/d9040c0aa0ba0508afe1da8c0af61da1",
-                "uiState": {
-                    "mode": 1,
-                    "x": 2620,
-                    "y": 1126,
-                    "width": 1210,
-                    "height": 636
-                }
-            },
-            {
-                "folder": "file:///home/blue/sources/data-migrator",
-                "backupPath": "/home/blue/.config/Code/Backups/8a03f396b43c43fb7142385ce128977a",
-                "uiState": {
-                    "mode": 1,
-                    "x": 3850,
-                    "y": 1126,
-                    "width": 1210,
-                    "height": 1292
-                }
-            }
-        ]
+        "openedWindows": []
     },
     "pickerWorkingDir": "/home/blue/sources"
 }
