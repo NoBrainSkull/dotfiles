@@ -17,7 +17,7 @@ function conky_main ()
                                             conky_window.width,
                                             conky_window.height)
 
-    local img = cairo_image_surface_create_from_png ('/home/blue/Pictures/Logos/docker.png')
+    local img = cairo_image_surface_create_from_png ('/home/blue/Pictures/KDA.png')
 
     cr = cairo_create (cs)
     
