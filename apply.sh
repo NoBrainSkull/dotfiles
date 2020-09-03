@@ -6,7 +6,14 @@ then
 	exit 1
 fi
 
+
+mkdir -p "/home/$USER/.config"
+mkdir -p "/home/$USER/.wallpapers"
+mkdir -p "/home/$USER/.scripts"
+
 stow -d "/home/$USER/sources/dotfiles" -t "/home/$USER/.config" ".config"
+stow -d "/home/$USER/sources/dotfiles" -t "/home/$USER/.wallpapers" ".wallpapers"
+stow -d "/home/$USER/sources/dotfiles" -t "/home/$USER/.scripts" ".scripts"
 
 if [ $? == 0 ]
 then

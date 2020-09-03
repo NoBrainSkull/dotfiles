@@ -28,4 +28,4 @@ bspc config gapless_monocle      true
 
 bspc rule -a Kupfer.py focus=on
 
-feh --bg-fill ~/Pictures/Wallpapers/pilot.png
+feh --bg-fill ~/.wallpapers/pilot.png
