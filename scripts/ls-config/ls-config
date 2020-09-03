@@ -1,0 +1,9 @@
+#!/bin/zsh
+
+opts=("bspwm
+sxhkd
+rofi")
+
+choice=$(echo -e "${opts[@]}" | rofi -dmenu -theme './test.rasi' window -i -p 'Open config file :')
+
+echo "You choose $choice"
