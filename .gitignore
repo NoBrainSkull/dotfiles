@@ -1,5 +1,12 @@
-.config/Code/User/workspaceStorage
 .config/Code/logs
 .config/Code/CachedData/
 .config/Code/CachedExtensionVSIXs
 .config/Code/Cache/
+.config/Code/CachedExtensions/
+.config/Code/Code\ Cache
+.config/Code/Backups/
+.config/Code/Session\ Storage/
+.config/Code/Network\ Persistent\ State/
+.config/Code/TransportSecurity/
+.config/Code/User/
+.config/Code/**/*.json

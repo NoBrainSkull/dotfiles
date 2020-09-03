@@ -2,10 +2,11 @@
     "telemetry.machineId": "2484b17b17bdbfdeb22350346b16148b964e4a06be067f341fe94a107e8870f5",
     "openedPathsList": {
         "workspaces3": [
+            "file:///home/blue/sources/aurora-store",
+            "file:///home/blue/sources/kl-core-directory",
             "file:///home/blue/sources/orkestra",
             "file:///home/blue/sources/nutshell-ferrors",
             "file:///home/blue/sources/kl-sdk-directory",
-            "file:///home/blue/sources/kl-core-directory",
             "file:///home/blue/sources/kl-login-proxy",
             "file:///home/blue/sources/orkestra-studio",
             "file:///home/blue/sources/orkestra-webapp",
@@ -100,8 +101,7 @@
             "file:///home/blue/sources/squid-core-users",
             "file:///home/blue/sources/majora-core-users",
             "file:///home/blue/sources/ml-core-user",
-            "file:///home/blue/sources/vuetify-2-poc",
-            "file:///home/blue/sources/impact"
+            "file:///home/blue/sources/vuetify-2-poc"
         ],
         "files2": [
             "file:///home/blue/sources/scripts/ls-config/bug.rasi",
@@ -210,14 +210,14 @@
     "themeBackground": "#1e1e1e",
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/blue/sources/orkestra",
-            "backupPath": "/home/blue/.config/Code/Backups/52febd959088f0a9049ac8df10d1908f",
+            "folder": "file:///home/blue/sources/kl-core-directory",
+            "backupPath": "/home/blue/.config/Code/Backups/ba9f515efac5ed19579c1fb2f13e4dbf",
             "uiState": {
                 "mode": 1,
-                "x": 2575,
-                "y": 1053,
-                "width": 2530,
-                "height": 1410
+                "x": 836,
+                "y": 96,
+                "width": 755,
+                "height": 708
             }
         },
         "openedWindows": []
@@ -257,8 +257,7 @@
                             "items": [
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
-                                    "label": "&&Reopen Closed Editor",
-                                    "enabled": false
+                                    "label": "&&Reopen Closed Editor"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -267,7 +266,29 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "fsPath": "/home/blue/sources/orkestra",
+                                        "fsPath": "/home/blue/sources/kl-core-directory",
+                                        "external": "file:///home/blue/sources/kl-core-directory",
+                                        "path": "/home/blue/sources/kl-core-directory",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/sources/kl-core-directory"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/blue/sources/aurora-store",
+                                        "path": "/home/blue/sources/aurora-store",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/sources/aurora-store"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
                                         "external": "file:///home/blue/sources/orkestra",
                                         "path": "/home/blue/sources/orkestra",
                                         "scheme": "file"
@@ -296,17 +317,6 @@
                                     },
                                     "enabled": true,
                                     "label": "~/sources/kl-sdk-directory"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/blue/sources/kl-core-directory",
-                                        "path": "/home/blue/sources/kl-core-directory",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/sources/kl-core-directory"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -362,17 +372,6 @@
                                     },
                                     "enabled": true,
                                     "label": "~/sources/ml-organization"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/blue/sources/majora-admin",
-                                        "path": "/home/blue/sources/majora-admin",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/sources/majora-admin"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -583,13 +582,6 @@
                                 {
                                     "id": "workbench.action.selectIconTheme",
                                     "label": "File &&Icon Theme"
-                                },
-                                {
-                                    "id": "vscode.menubar.separator"
-                                },
-                                {
-                                    "id": "workbench.userDataSync.actions.manage",
-                                    "label": "Settings Sync is On"
                                 }
                             ]
                         }
@@ -807,8 +799,7 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarVisibility",
-                                    "label": "Show &&Side Bar",
-                                    "checked": true
+                                    "label": "Show &&Side Bar"
                                 },
                                 {
                                     "id": "workbench.action.toggleStatusbarVisibility",
@@ -827,8 +818,7 @@
                                 },
                                 {
                                     "id": "workbench.action.togglePanel",
-                                    "label": "Show &&Panel",
-                                    "checked": true
+                                    "label": "Show &&Panel"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -1012,8 +1002,7 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location",
-                        "enabled": false
+                        "label": "&&Last Edit Location"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1082,45 +1071,54 @@
                                 },
                                 {
                                     "id": "workbench.action.focusThirdEditorGroup",
-                                    "label": "Group &&3"
+                                    "label": "Group &&3",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusFourthEditorGroup",
-                                    "label": "Group &&4"
+                                    "label": "Group &&4",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusFifthEditorGroup",
-                                    "label": "Group &&5"
+                                    "label": "Group &&5",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
                                     "id": "workbench.action.focusNextGroup",
-                                    "label": "&&Next Group"
+                                    "label": "&&Next Group",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusPreviousGroup",
-                                    "label": "&&Previous Group"
+                                    "label": "&&Previous Group",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
                                     "id": "workbench.action.focusLeftGroup",
-                                    "label": "Group &&Left"
+                                    "label": "Group &&Left",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusRightGroup",
-                                    "label": "Group &&Right"
+                                    "label": "Group &&Right",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusAboveGroup",
-                                    "label": "Group &&Above"
+                                    "label": "Group &&Above",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusBelowGroup",
-                                    "label": "Group &&Below"
+                                    "label": "Group &&Below",
+                                    "enabled": false
                                 }
                             ]
                         }
@@ -1315,7 +1313,8 @@
                     },
                     {
                         "id": "workbench.action.terminal.split",
-                        "label": "&&Split Terminal"
+                        "label": "&&Split Terminal",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
