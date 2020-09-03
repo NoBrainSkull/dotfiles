@@ -11,7 +11,7 @@ super + Return
 
 # program launcher
 super + @space
-	dmenu_run
+	launcher
 
 # make sxhkd reload its configuration files:
 super + Escape

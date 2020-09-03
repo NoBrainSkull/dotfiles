@@ -2,27 +2,34 @@
     "telemetry.machineId": "2484b17b17bdbfdeb22350346b16148b964e4a06be067f341fe94a107e8870f5",
     "openedPathsList": {
         "workspaces3": [
-            "file:///home/blue/sources/gtk-app-test",
-            "file:///home/blue/sources/data-migrator",
-            "file:///home/blue/sources/majora-admin",
-            "file:///home/blue/sources/majora-core-evaluations",
             "file:///home/blue/sources/orkestra",
-            "file:///home/blue/sources/kl-core-directory",
-            "file:///home/blue/sources/majora-core-gateway",
+            "file:///home/blue/sources/nutshell-ferrors",
             "file:///home/blue/sources/kl-sdk-directory",
-            "file:///home/blue/sources/majora-app",
+            "file:///home/blue/sources/kl-core-directory",
             "file:///home/blue/sources/kl-login-proxy",
             "file:///home/blue/sources/orkestra-studio",
             "file:///home/blue/sources/orkestra-webapp",
-            "file:///home/blue/sources/kl-data-migrator",
+            "file:///home/blue/sources/ml-student",
+            "file:///home/blue/sources/ml-organization",
+            "file:///home/blue/sources/majora-admin",
+            "file:///home/blue/sources/data-migrator",
+            "file:///home/blue/sources/ml-core-graph-gateway",
+            "file:///home/blue/sources/majora-core-gateway",
+            "file:///home/blue/sources/majora-core-evaluations",
+            "file:///home/blue/sources/ml-core-course",
+            "file:///home/blue/sources/Bento",
+            "file:///home/blue/.mozilla/firefox/bx2dovdw.default-1598900008365/chrome",
+            "file:///home/blue/.mozilla/firefox/0q46yb8l.default-1594068594456/chrome",
+            "file:///home/blue/sources/majora-app",
             "file:///home/blue",
+            "file:///home/blue/sources/gtk-app-test",
+            "file:///home/blue/sources/kl-data-migrator",
             "file:///home/blue/sources/nutshell-aurora-store",
             "file:///opt/android-sdk/tools/bin",
             "file:///home/blue/sources/meander",
             "file:///home/blue/sources/kl-data-migrator/orkestra",
             "file:///home/blue/sources/studies/my-shell",
             "file:///home/blue/sources/my-shell",
-            "file:///home/blue/sources/nutshell-ferrors",
             "file:///home/blue/sources/tmp",
             "file:///home/blue/sources/nutshell-renderless-components",
             "file:///home/blue/sources/nutshell-usurper",
@@ -42,7 +49,6 @@
             "file:///home/blue/sources/karbon-code",
             "file:///home/blue/sources/poc-dp",
             "file:///home/blue/sources/nutshell-stats",
-            "file:///home/blue/sources/ml-core-graph-gateway",
             "file:///home/blue/sources/test-aurora-store",
             "file:///home/blue/sources/heaven-trip-back-master",
             "file:///home/blue/sources/kl-core-access-manager",
@@ -63,12 +69,10 @@
             "file:///home/blue/.config",
             "file:///home/blue/.config/spicetify",
             "file:///home/blue/sources/test-haskell-lambda",
-            "file:///home/blue/sources/ml-core-course",
             "file:///home/blue/sources/majora-companion",
             "file:///home/blue/sources/fafiec-app",
             "file:///home/blue/sources/squid-core",
             "file:///home/blue/sources/squid-core-gateway",
-            "file:///home/blue/sources/ml-organization",
             "file:///home/blue/sources/fafiec-core-graphgateway",
             "file:///home/blue/sources/perso/test-haskell",
             "file:///home/blue/sources/fafiec-no-cheat",
@@ -97,13 +101,12 @@
             "file:///home/blue/sources/majora-core-users",
             "file:///home/blue/sources/ml-core-user",
             "file:///home/blue/sources/vuetify-2-poc",
-            "file:///home/blue/sources/impact",
-            "file:///home/blue/sources/boushao-app",
-            "file:///home/blue/sources/karbon-poc",
-            "file:///home/blue/sources/impactapi",
-            "file:///home/blue/sources/ml-core-quiz"
+            "file:///home/blue/sources/impact"
         ],
         "files2": [
+            "file:///home/blue/sources/scripts/ls-config/bug.rasi",
+            "file:///home/blue/sources/scripts/ls-config/test.rasi",
+            "file:///home/blue/.config/bspwm/bspwmrc",
             "file:///home/blue/sources/dotfiles/.config/conky/script.lua",
             "file:///home/blue/sources/dotfiles/.config/conky/conky.conf",
             "file:///home/blue/.zaliases",
@@ -200,23 +203,21 @@
             "file:///home/blue/7.22882",
             "file:///home/blue/7.33727",
             "file:///home/blue/7.35075",
-            "file:///home/blue/7.3862",
-            "file:///home/blue/7.4869",
-            "file:///home/blue/7.78645",
-            "file:///home/blue/8.53513"
+            "file:///home/blue/7.3862"
         ]
     },
     "theme": "vs-dark",
     "themeBackground": "#1e1e1e",
     "windowsState": {
         "lastActiveWindow": {
-            "backupPath": "/home/blue/.config/Code/Backups/1598556244331",
+            "folder": "file:///home/blue/sources/orkestra",
+            "backupPath": "/home/blue/.config/Code/Backups/52febd959088f0a9049ac8df10d1908f",
             "uiState": {
                 "mode": 1,
-                "x": 2611,
+                "x": 2575,
                 "y": 1053,
-                "width": 1306,
-                "height": 724
+                "width": 2530,
+                "height": 1410
             }
         },
         "openedWindows": []
@@ -266,50 +267,7 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "external": "file:///home/blue/sources/gtk-app-test",
-                                        "path": "/home/blue/sources/gtk-app-test",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/sources/gtk-app-test"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/blue/sources/data-migrator",
-                                        "path": "/home/blue/sources/data-migrator",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/sources/data-migrator"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/blue/sources/majora-admin",
-                                        "path": "/home/blue/sources/majora-admin",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/sources/majora-admin"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/blue/sources/majora-core-evaluations",
-                                        "path": "/home/blue/sources/majora-core-evaluations",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/sources/majora-core-evaluations"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
+                                        "fsPath": "/home/blue/sources/orkestra",
                                         "external": "file:///home/blue/sources/orkestra",
                                         "path": "/home/blue/sources/orkestra",
                                         "scheme": "file"
@@ -321,23 +279,12 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "external": "file:///home/blue/sources/kl-core-directory",
-                                        "path": "/home/blue/sources/kl-core-directory",
+                                        "external": "file:///home/blue/sources/nutshell-ferrors",
+                                        "path": "/home/blue/sources/nutshell-ferrors",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/sources/kl-core-directory"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/blue/sources/majora-core-gateway",
-                                        "path": "/home/blue/sources/majora-core-gateway",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/sources/majora-core-gateway"
+                                    "label": "~/sources/nutshell-ferrors"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -354,12 +301,12 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "external": "file:///home/blue/sources/majora-app",
-                                        "path": "/home/blue/sources/majora-app",
+                                        "external": "file:///home/blue/sources/kl-core-directory",
+                                        "path": "/home/blue/sources/kl-core-directory",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/sources/majora-app"
+                                    "label": "~/sources/kl-core-directory"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -373,18 +320,95 @@
                                     "label": "~/sources/kl-login-proxy"
                                 },
                                 {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/blue/sources/orkestra-studio",
+                                        "path": "/home/blue/sources/orkestra-studio",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/sources/orkestra-studio"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/blue/sources/orkestra-webapp",
+                                        "path": "/home/blue/sources/orkestra-webapp",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/sources/orkestra-webapp"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/blue/sources/ml-student",
+                                        "path": "/home/blue/sources/ml-student",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/sources/ml-student"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/blue/sources/ml-organization",
+                                        "path": "/home/blue/sources/ml-organization",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/sources/ml-organization"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/blue/sources/majora-admin",
+                                        "path": "/home/blue/sources/majora-admin",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/sources/majora-admin"
+                                },
+                                {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
                                     "id": "openRecentFile",
                                     "uri": {
                                         "$mid": 1,
-                                        "external": "file:///home/blue/sources/dotfiles/.config/conky/conky.conf",
-                                        "path": "/home/blue/sources/dotfiles/.config/conky/conky.conf",
+                                        "external": "file:///home/blue/sources/scripts/ls-config/bug.rasi",
+                                        "path": "/home/blue/sources/scripts/ls-config/bug.rasi",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/sources/dotfiles/.config/conky/conky.conf"
+                                    "label": "~/sources/scripts/ls-config/bug.rasi"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/blue/sources/scripts/ls-config/test.rasi",
+                                        "path": "/home/blue/sources/scripts/ls-config/test.rasi",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/sources/scripts/ls-config/test.rasi"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/blue/.config/bspwm/bspwmrc",
+                                        "path": "/home/blue/.config/bspwm/bspwmrc",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/.config/bspwm/bspwmrc"
                                 },
                                 {
                                     "id": "openRecentFile",
@@ -396,6 +420,17 @@
                                     },
                                     "enabled": true,
                                     "label": "~/sources/dotfiles/.config/conky/script.lua"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/blue/sources/dotfiles/.config/conky/conky.conf",
+                                        "path": "/home/blue/sources/dotfiles/.config/conky/conky.conf",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/sources/dotfiles/.config/conky/conky.conf"
                                 },
                                 {
                                     "id": "openRecentFile",
@@ -453,39 +488,6 @@
                                     "label": "~/JS"
                                 },
                                 {
-                                    "id": "openRecentFile",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/blue/POO/corrections/step1/use-cases",
-                                        "path": "/home/blue/POO/corrections/step1/use-cases",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/POO/corrections/step1/use-cases"
-                                },
-                                {
-                                    "id": "openRecentFile",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/blue/0.348212",
-                                        "path": "/home/blue/0.348212",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/0.348212"
-                                },
-                                {
-                                    "id": "openRecentFile",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/blue/0.39681",
-                                        "path": "/home/blue/0.39681",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/0.39681"
-                                },
-                                {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
@@ -526,7 +528,8 @@
                     },
                     {
                         "id": "workbench.action.files.saveAll",
-                        "label": "Save A&&ll"
+                        "label": "Save A&&ll",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -604,8 +607,7 @@
                     },
                     {
                         "id": "workbench.action.closeFolder",
-                        "label": "Close &&Folder",
-                        "enabled": false
+                        "label": "Close &&Folder"
                     },
                     {
                         "id": "workbench.action.closeWindow",
@@ -805,7 +807,8 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarVisibility",
-                                    "label": "Show &&Side Bar"
+                                    "label": "Show &&Side Bar",
+                                    "checked": true
                                 },
                                 {
                                     "id": "workbench.action.toggleStatusbarVisibility",
@@ -824,7 +827,8 @@
                                 },
                                 {
                                     "id": "workbench.action.togglePanel",
-                                    "label": "Show &&Panel"
+                                    "label": "Show &&Panel",
+                                    "checked": true
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -1008,7 +1012,8 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location"
+                        "label": "&&Last Edit Location",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1077,54 +1082,45 @@
                                 },
                                 {
                                     "id": "workbench.action.focusThirdEditorGroup",
-                                    "label": "Group &&3",
-                                    "enabled": false
+                                    "label": "Group &&3"
                                 },
                                 {
                                     "id": "workbench.action.focusFourthEditorGroup",
-                                    "label": "Group &&4",
-                                    "enabled": false
+                                    "label": "Group &&4"
                                 },
                                 {
                                     "id": "workbench.action.focusFifthEditorGroup",
-                                    "label": "Group &&5",
-                                    "enabled": false
+                                    "label": "Group &&5"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
                                     "id": "workbench.action.focusNextGroup",
-                                    "label": "&&Next Group",
-                                    "enabled": false
+                                    "label": "&&Next Group"
                                 },
                                 {
                                     "id": "workbench.action.focusPreviousGroup",
-                                    "label": "&&Previous Group",
-                                    "enabled": false
+                                    "label": "&&Previous Group"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
                                     "id": "workbench.action.focusLeftGroup",
-                                    "label": "Group &&Left",
-                                    "enabled": false
+                                    "label": "Group &&Left"
                                 },
                                 {
                                     "id": "workbench.action.focusRightGroup",
-                                    "label": "Group &&Right",
-                                    "enabled": false
+                                    "label": "Group &&Right"
                                 },
                                 {
                                     "id": "workbench.action.focusAboveGroup",
-                                    "label": "Group &&Above",
-                                    "enabled": false
+                                    "label": "Group &&Above"
                                 },
                                 {
                                     "id": "workbench.action.focusBelowGroup",
-                                    "label": "Group &&Below",
-                                    "enabled": false
+                                    "label": "Group &&Below"
                                 }
                             ]
                         }
@@ -1319,8 +1315,7 @@
                     },
                     {
                         "id": "workbench.action.terminal.split",
-                        "label": "&&Split Terminal",
-                        "enabled": false
+                        "label": "&&Split Terminal"
                     },
                     {
                         "id": "vscode.menubar.separator"
