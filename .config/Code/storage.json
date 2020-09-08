@@ -2,6 +2,8 @@
     "telemetry.machineId": "2484b17b17bdbfdeb22350346b16148b964e4a06be067f341fe94a107e8870f5",
     "openedPathsList": {
         "workspaces3": [
+            "file:///home/blue/sources/fafiec-core-evaluation",
+            "file:///home/blue/sources/karbon-app",
             "file:///home/blue/sources/aurora-store",
             "file:///home/blue/sources/kl-core-directory",
             "file:///home/blue/sources/orkestra",
@@ -77,7 +79,6 @@
             "file:///home/blue/sources/fafiec-core-graphgateway",
             "file:///home/blue/sources/perso/test-haskell",
             "file:///home/blue/sources/fafiec-no-cheat",
-            "file:///home/blue/sources/fafiec-core-evaluation",
             "file:///home/blue/sources/fafiec-core-token",
             "file:///home/blue/sources/fafiec-core-tokens",
             "file:///home/blue/sources/deliveroo",
@@ -94,7 +95,6 @@
             "file:///home/blue/kl-authorizer",
             "file:///home/blue/sources/actinuum/www",
             "file:///home/blue/sources/fafiec-admin",
-            "file:///home/blue/sources/karbon-app",
             "file:///home/blue/sources/kl-core-profile-manager",
             "file:///home/blue/sources/play-core",
             "file:///home/blue/sources/play-app",
@@ -104,9 +104,11 @@
             "file:///home/blue/sources/vuetify-2-poc"
         ],
         "files2": [
+            "file:///home/blue/Documents/estimation_fafiec.md",
+            "file:///home/blue/.config/bspwm/bspwmrc",
+            "file:///home/blue/sources/dotfiles/.scripts/ls-config/~/.config/bspwm/bspwmrc",
             "file:///home/blue/sources/scripts/ls-config/bug.rasi",
             "file:///home/blue/sources/scripts/ls-config/test.rasi",
-            "file:///home/blue/.config/bspwm/bspwmrc",
             "file:///home/blue/sources/dotfiles/.config/conky/script.lua",
             "file:///home/blue/sources/dotfiles/.config/conky/conky.conf",
             "file:///home/blue/.zaliases",
@@ -201,23 +203,20 @@
             "file:///home/blue/6.73825",
             "file:///home/blue/6.84072",
             "file:///home/blue/7.22882",
-            "file:///home/blue/7.33727",
-            "file:///home/blue/7.35075",
-            "file:///home/blue/7.3862"
+            "file:///home/blue/7.33727"
         ]
     },
     "theme": "vs-dark",
     "themeBackground": "#1e1e1e",
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/blue/sources/kl-core-directory",
-            "backupPath": "/home/blue/.config/Code/Backups/ba9f515efac5ed19579c1fb2f13e4dbf",
+            "backupPath": "/home/blue/.config/Code/Backups/1599557996034",
             "uiState": {
                 "mode": 1,
-                "x": 836,
-                "y": 96,
-                "width": 755,
-                "height": 708
+                "x": 9,
+                "y": 9,
+                "width": 817,
+                "height": 882
             }
         },
         "openedWindows": []
@@ -257,7 +256,8 @@
                             "items": [
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
-                                    "label": "&&Reopen Closed Editor"
+                                    "label": "&&Reopen Closed Editor",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -266,13 +266,23 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "fsPath": "/home/blue/sources/kl-core-directory",
-                                        "external": "file:///home/blue/sources/kl-core-directory",
-                                        "path": "/home/blue/sources/kl-core-directory",
+                                        "external": "file:///home/blue/sources/fafiec-core-evaluation",
+                                        "path": "/home/blue/sources/fafiec-core-evaluation",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/sources/kl-core-directory"
+                                    "label": "~/sources/fafiec-core-evaluation"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/blue/sources/karbon-app",
+                                        "path": "/home/blue/sources/karbon-app",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/sources/karbon-app"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -284,6 +294,17 @@
                                     },
                                     "enabled": true,
                                     "label": "~/sources/aurora-store"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/blue/sources/kl-core-directory",
+                                        "path": "/home/blue/sources/kl-core-directory",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/sources/kl-core-directory"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -352,29 +373,40 @@
                                     "label": "~/sources/orkestra-webapp"
                                 },
                                 {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/blue/sources/ml-student",
-                                        "path": "/home/blue/sources/ml-student",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/sources/ml-student"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/blue/sources/ml-organization",
-                                        "path": "/home/blue/sources/ml-organization",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/sources/ml-organization"
-                                },
-                                {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/blue/Documents/estimation_fafiec.md",
+                                        "path": "/home/blue/Documents/estimation_fafiec.md",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/estimation_fafiec.md"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/blue/.config/bspwm/bspwmrc",
+                                        "path": "/home/blue/.config/bspwm/bspwmrc",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/.config/bspwm/bspwmrc"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/blue/sources/dotfiles/.scripts/ls-config/~/.config/bspwm/bspwmrc",
+                                        "path": "/home/blue/sources/dotfiles/.scripts/ls-config/~/.config/bspwm/bspwmrc",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/sources/dotfiles/.scripts/ls-config/~/.config/bspwm/bspwmrc"
                                 },
                                 {
                                     "id": "openRecentFile",
@@ -397,17 +429,6 @@
                                     },
                                     "enabled": true,
                                     "label": "~/sources/scripts/ls-config/test.rasi"
-                                },
-                                {
-                                    "id": "openRecentFile",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/blue/.config/bspwm/bspwmrc",
-                                        "path": "/home/blue/.config/bspwm/bspwmrc",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/.config/bspwm/bspwmrc"
                                 },
                                 {
                                     "id": "openRecentFile",
@@ -463,28 +484,6 @@
                                     },
                                     "enabled": true,
                                     "label": "~/0.31177"
-                                },
-                                {
-                                    "id": "openRecentFile",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///mnt/media/UnicornStorage/Companies/Nutshell/Formations/JAOPA1%2C",
-                                        "path": "/mnt/media/UnicornStorage/Companies/Nutshell/Formations/JAOPA1,",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/mnt/media/UnicornStorage/Companies/Nutshell/Formations/JAOPA1,"
-                                },
-                                {
-                                    "id": "openRecentFile",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/blue/JS",
-                                        "path": "/home/blue/JS",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/JS"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -599,7 +598,8 @@
                     },
                     {
                         "id": "workbench.action.closeFolder",
-                        "label": "Close &&Folder"
+                        "label": "Close &&Folder",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.closeWindow",
@@ -1071,54 +1071,45 @@
                                 },
                                 {
                                     "id": "workbench.action.focusThirdEditorGroup",
-                                    "label": "Group &&3",
-                                    "enabled": false
+                                    "label": "Group &&3"
                                 },
                                 {
                                     "id": "workbench.action.focusFourthEditorGroup",
-                                    "label": "Group &&4",
-                                    "enabled": false
+                                    "label": "Group &&4"
                                 },
                                 {
                                     "id": "workbench.action.focusFifthEditorGroup",
-                                    "label": "Group &&5",
-                                    "enabled": false
+                                    "label": "Group &&5"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
                                     "id": "workbench.action.focusNextGroup",
-                                    "label": "&&Next Group",
-                                    "enabled": false
+                                    "label": "&&Next Group"
                                 },
                                 {
                                     "id": "workbench.action.focusPreviousGroup",
-                                    "label": "&&Previous Group",
-                                    "enabled": false
+                                    "label": "&&Previous Group"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
                                     "id": "workbench.action.focusLeftGroup",
-                                    "label": "Group &&Left",
-                                    "enabled": false
+                                    "label": "Group &&Left"
                                 },
                                 {
                                     "id": "workbench.action.focusRightGroup",
-                                    "label": "Group &&Right",
-                                    "enabled": false
+                                    "label": "Group &&Right"
                                 },
                                 {
                                     "id": "workbench.action.focusAboveGroup",
-                                    "label": "Group &&Above",
-                                    "enabled": false
+                                    "label": "Group &&Above"
                                 },
                                 {
                                     "id": "workbench.action.focusBelowGroup",
-                                    "label": "Group &&Below",
-                                    "enabled": false
+                                    "label": "Group &&Below"
                                 }
                             ]
                         }

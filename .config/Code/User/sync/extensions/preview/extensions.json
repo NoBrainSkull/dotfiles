@@ -425,6 +425,13 @@
 	},
 	{
 		"identifier": {
+			"id": "knisterpeter.vscode-github",
+			"uuid": "8699dfcb-4beb-4760-b976-c46dcdd87df2"
+		},
+		"installed": true
+	},
+	{
+		"identifier": {
 			"id": "kumar-harsh.graphql-for-vscode",
 			"uuid": "3e8a391a-f3f0-44b2-8631-7847b0c8839a"
 		},

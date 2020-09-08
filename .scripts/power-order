@@ -1,0 +1,25 @@
+#!/bin/zsh
+
+confp="/home/$USER/.config"
+
+opts=("Shutdown
+Reboot
+")
+
+choice=$(echo -e "${opts[@]}" | rofi -dmenu -theme '~/.config/rofi/dmenu.rasi' window -i -p 'Issue order to :')
+
+function open {
+    code $1
+}
+
+case $choice in
+    shutdown)
+        poweroff
+        ;;
+    reboot)
+        reboot
+        ;;
+    *)
+        echo "Could not find this order."
+        ;;
+esac
