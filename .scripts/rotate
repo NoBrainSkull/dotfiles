@@ -1,0 +1,6 @@
+xinput set-prop "Wacom Pen and multitouch sensor Finger" --type=float "Coordinate Transformation Matrix" 0 -1 1 1 0 0 0 0 1
+
+xinput set-prop "SynPS/2 Synaptics TouchPad" --type=float "Coordinate Transformation Matrix" 0 -1 1 1 0 0 0 0 1
+
+
+xrandr -o left
