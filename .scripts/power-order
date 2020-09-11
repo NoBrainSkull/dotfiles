@@ -2,24 +2,36 @@
 
 confp="/home/$USER/.config"
 
-opts=("Shutdown
-Reboot
-")
+shutdown=""
+reboot=""
+suspend=""
+lock=""
 
-choice=$(echo -e "${opts[@]}" | rofi -dmenu -theme '~/.config/rofi/dmenu.rasi' window -i -p 'Issue order to :')
+opts=("$shutdown
+$reboot
+$suspend
+$lock")
+
+choice=$(echo -e "${opts[@]}" | rofi -dmenu -theme '~/.config/rofi/powermenu.rasi' window -i)
 
 function open {
     code $1
 }
 
 case $choice in
-    shutdown)
+    $shutdown)
         poweroff
         ;;
-    reboot)
+    $reboot)
         reboot
         ;;
+    $lock)
+        bspc quit
+        ;;
+    $suspend)
+        systemctl suspend-then-hibernate
+        ;;
     *)
-        echo "Could not find this order."
+        echo "Could not find $choice."
         ;;
 esac

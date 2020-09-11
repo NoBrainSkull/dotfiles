@@ -2,14 +2,18 @@
     "telemetry.machineId": "2484b17b17bdbfdeb22350346b16148b964e4a06be067f341fe94a107e8870f5",
     "openedPathsList": {
         "workspaces3": [
+            "file:///home/blue/sources/python-qt/playground",
+            "file:///home/blue/sources/orkestra-core",
+            "file:///home/blue/sources/kl-login-proxy",
+            "file:///home/blue/sources/kl-core-directory",
+            "file:///home/blue/sources/majora-core-evaluations",
+            "file:///home/blue/sources/bento",
             "file:///home/blue/sources/fafiec-core-evaluation",
             "file:///home/blue/sources/karbon-app",
             "file:///home/blue/sources/aurora-store",
-            "file:///home/blue/sources/kl-core-directory",
             "file:///home/blue/sources/orkestra",
             "file:///home/blue/sources/nutshell-ferrors",
             "file:///home/blue/sources/kl-sdk-directory",
-            "file:///home/blue/sources/kl-login-proxy",
             "file:///home/blue/sources/orkestra-studio",
             "file:///home/blue/sources/orkestra-webapp",
             "file:///home/blue/sources/ml-student",
@@ -18,7 +22,6 @@
             "file:///home/blue/sources/data-migrator",
             "file:///home/blue/sources/ml-core-graph-gateway",
             "file:///home/blue/sources/majora-core-gateway",
-            "file:///home/blue/sources/majora-core-evaluations",
             "file:///home/blue/sources/ml-core-course",
             "file:///home/blue/sources/Bento",
             "file:///home/blue/.mozilla/firefox/bx2dovdw.default-1598900008365/chrome",
@@ -98,12 +101,14 @@
             "file:///home/blue/sources/kl-core-profile-manager",
             "file:///home/blue/sources/play-core",
             "file:///home/blue/sources/play-app",
-            "file:///home/blue/sources/squid-core-users",
-            "file:///home/blue/sources/majora-core-users",
-            "file:///home/blue/sources/ml-core-user",
-            "file:///home/blue/sources/vuetify-2-poc"
+            "file:///home/blue/sources/squid-core-users"
         ],
         "files2": [
+            "file:///home/blue/sources/kl-core-directory/.gitignore",
+            "file:///home/blue/.config/sxhkd/sxhkdrc",
+            "file:///home/blue/.scripts/power-menu",
+            "file:///home/blue/.scripts/fake-power-menu",
+            "file:///home/blue/sources/dotfiles/.config/rofi/powermenu.rasi",
             "file:///home/blue/Documents/estimation_fafiec.md",
             "file:///home/blue/.config/bspwm/bspwmrc",
             "file:///home/blue/sources/dotfiles/.scripts/ls-config/~/.config/bspwm/bspwmrc",
@@ -198,24 +203,20 @@
             "file:///home/blue/5.6901",
             "file:///home/blue/5.98958",
             "file:///home/blue/6.13938",
-            "file:///home/blue/6.289",
-            "file:///home/blue/6.4802",
-            "file:///home/blue/6.73825",
-            "file:///home/blue/6.84072",
-            "file:///home/blue/7.22882",
-            "file:///home/blue/7.33727"
+            "file:///home/blue/6.289"
         ]
     },
     "theme": "vs-dark",
     "themeBackground": "#1e1e1e",
     "windowsState": {
         "lastActiveWindow": {
-            "backupPath": "/home/blue/.config/Code/Backups/1599557996034",
+            "folder": "file:///home/blue/sources/python-qt/playground",
+            "backupPath": "/home/blue/.config/Code/Backups/f7e6c2128eab855f25e2b51bc41eb002",
             "uiState": {
                 "mode": 1,
                 "x": 9,
                 "y": 9,
-                "width": 817,
+                "width": 1080,
                 "height": 882
             }
         },
@@ -256,11 +257,77 @@
                             "items": [
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
-                                    "label": "&&Reopen Closed Editor",
-                                    "enabled": false
+                                    "label": "&&Reopen Closed Editor"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "fsPath": "/home/blue/sources/python-qt/playground",
+                                        "external": "file:///home/blue/sources/python-qt/playground",
+                                        "path": "/home/blue/sources/python-qt/playground",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/sources/python-qt/playground"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/blue/sources/orkestra-core",
+                                        "path": "/home/blue/sources/orkestra-core",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/sources/orkestra-core"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/blue/sources/kl-login-proxy",
+                                        "path": "/home/blue/sources/kl-login-proxy",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/sources/kl-login-proxy"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/blue/sources/kl-core-directory",
+                                        "path": "/home/blue/sources/kl-core-directory",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/sources/kl-core-directory"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/blue/sources/majora-core-evaluations",
+                                        "path": "/home/blue/sources/majora-core-evaluations",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/sources/majora-core-evaluations"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/blue/sources/bento",
+                                        "path": "/home/blue/sources/bento",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/sources/bento"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -299,17 +366,6 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "external": "file:///home/blue/sources/kl-core-directory",
-                                        "path": "/home/blue/sources/kl-core-directory",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/sources/kl-core-directory"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
                                         "external": "file:///home/blue/sources/orkestra",
                                         "path": "/home/blue/sources/orkestra",
                                         "scheme": "file"
@@ -318,62 +374,62 @@
                                     "label": "~/sources/orkestra"
                                 },
                                 {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/blue/sources/nutshell-ferrors",
-                                        "path": "/home/blue/sources/nutshell-ferrors",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/sources/nutshell-ferrors"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/blue/sources/kl-sdk-directory",
-                                        "path": "/home/blue/sources/kl-sdk-directory",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/sources/kl-sdk-directory"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/blue/sources/kl-login-proxy",
-                                        "path": "/home/blue/sources/kl-login-proxy",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/sources/kl-login-proxy"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/blue/sources/orkestra-studio",
-                                        "path": "/home/blue/sources/orkestra-studio",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/sources/orkestra-studio"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/blue/sources/orkestra-webapp",
-                                        "path": "/home/blue/sources/orkestra-webapp",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/sources/orkestra-webapp"
-                                },
-                                {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/blue/sources/kl-core-directory/.gitignore",
+                                        "path": "/home/blue/sources/kl-core-directory/.gitignore",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/sources/kl-core-directory/.gitignore"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/blue/.config/sxhkd/sxhkdrc",
+                                        "path": "/home/blue/.config/sxhkd/sxhkdrc",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/.config/sxhkd/sxhkdrc"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/blue/.scripts/power-menu",
+                                        "path": "/home/blue/.scripts/power-menu",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/.scripts/power-menu"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/blue/.scripts/fake-power-menu",
+                                        "path": "/home/blue/.scripts/fake-power-menu",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/.scripts/fake-power-menu"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/blue/sources/dotfiles/.config/rofi/powermenu.rasi",
+                                        "path": "/home/blue/sources/dotfiles/.config/rofi/powermenu.rasi",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/sources/dotfiles/.config/rofi/powermenu.rasi"
                                 },
                                 {
                                     "id": "openRecentFile",
@@ -429,61 +485,6 @@
                                     },
                                     "enabled": true,
                                     "label": "~/sources/scripts/ls-config/test.rasi"
-                                },
-                                {
-                                    "id": "openRecentFile",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/blue/sources/dotfiles/.config/conky/script.lua",
-                                        "path": "/home/blue/sources/dotfiles/.config/conky/script.lua",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/sources/dotfiles/.config/conky/script.lua"
-                                },
-                                {
-                                    "id": "openRecentFile",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/blue/sources/dotfiles/.config/conky/conky.conf",
-                                        "path": "/home/blue/sources/dotfiles/.config/conky/conky.conf",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/sources/dotfiles/.config/conky/conky.conf"
-                                },
-                                {
-                                    "id": "openRecentFile",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/blue/.zaliases",
-                                        "path": "/home/blue/.zaliases",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/.zaliases"
-                                },
-                                {
-                                    "id": "openRecentFile",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/blue/0.299485",
-                                        "path": "/home/blue/0.299485",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/0.299485"
-                                },
-                                {
-                                    "id": "openRecentFile",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/blue/0.31177",
-                                        "path": "/home/blue/0.31177",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/0.31177"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -598,8 +599,7 @@
                     },
                     {
                         "id": "workbench.action.closeFolder",
-                        "label": "Close &&Folder",
-                        "enabled": false
+                        "label": "Close &&Folder"
                     },
                     {
                         "id": "workbench.action.closeWindow",
@@ -799,7 +799,8 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarVisibility",
-                                    "label": "Show &&Side Bar"
+                                    "label": "Show &&Side Bar",
+                                    "checked": true
                                 },
                                 {
                                     "id": "workbench.action.toggleStatusbarVisibility",
@@ -1071,45 +1072,54 @@
                                 },
                                 {
                                     "id": "workbench.action.focusThirdEditorGroup",
-                                    "label": "Group &&3"
+                                    "label": "Group &&3",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusFourthEditorGroup",
-                                    "label": "Group &&4"
+                                    "label": "Group &&4",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusFifthEditorGroup",
-                                    "label": "Group &&5"
+                                    "label": "Group &&5",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
                                     "id": "workbench.action.focusNextGroup",
-                                    "label": "&&Next Group"
+                                    "label": "&&Next Group",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusPreviousGroup",
-                                    "label": "&&Previous Group"
+                                    "label": "&&Previous Group",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
                                     "id": "workbench.action.focusLeftGroup",
-                                    "label": "Group &&Left"
+                                    "label": "Group &&Left",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusRightGroup",
-                                    "label": "Group &&Right"
+                                    "label": "Group &&Right",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusAboveGroup",
-                                    "label": "Group &&Above"
+                                    "label": "Group &&Above",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusBelowGroup",
-                                    "label": "Group &&Below"
+                                    "label": "Group &&Below",
+                                    "enabled": false
                                 }
                             ]
                         }
@@ -1304,8 +1314,7 @@
                     },
                     {
                         "id": "workbench.action.terminal.split",
-                        "label": "&&Split Terminal",
-                        "enabled": false
+                        "label": "&&Split Terminal"
                     },
                     {
                         "id": "vscode.menubar.separator"

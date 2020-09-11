@@ -383,6 +383,13 @@
 	},
 	{
 		"identifier": {
+			"id": "bbenoist.qml",
+			"uuid": "1dcbb6ee-7fa8-47d1-8a51-45f2f2adf2a5"
+		},
+		"installed": true
+	},
+	{
+		"identifier": {
 			"id": "eamodio.gitlens",
 			"uuid": "4de763bd-505d-4978-9575-2b7696ecf94e"
 		},
@@ -448,6 +455,13 @@
 		"identifier": {
 			"id": "ms-azuretools.vscode-docker",
 			"uuid": "0479fc1c-3d67-49f9-b087-fb9069afe48f"
+		},
+		"installed": true
+	},
+	{
+		"identifier": {
+			"id": "ms-python.python",
+			"uuid": "f1f59ae4-9318-4f3c-a9b5-81b2eaa5f8a5"
 		},
 		"installed": true
 	},
@@ -540,6 +554,13 @@
 		"identifier": {
 			"id": "sdras.vue-vscode-snippets",
 			"uuid": "c8d95916-cf54-455f-b324-cbd887b7d3a8"
+		},
+		"installed": true
+	},
+	{
+		"identifier": {
+			"id": "seanwu.vscode-qt-for-python",
+			"uuid": "3e3d1520-4354-4dd2-8efc-92df8ed8c294"
 		},
 		"installed": true
 	},
