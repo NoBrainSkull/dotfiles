@@ -1,6 +1,5 @@
 #! /bin/sh
 
-feh --bg-fill ~/.wallpapers/pilot.png
 start-if-not-running sxhkd
 start-if-not-running configure-monitors
 start-if-not-running no-beep
@@ -29,3 +28,4 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 bspc rule -a Kupfer.py focus=on
+feh --bg-fill ~/.wallpapers/pilot.png

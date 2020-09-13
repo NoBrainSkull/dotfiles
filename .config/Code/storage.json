@@ -2,16 +2,17 @@
     "telemetry.machineId": "2484b17b17bdbfdeb22350346b16148b964e4a06be067f341fe94a107e8870f5",
     "openedPathsList": {
         "workspaces3": [
+            "file:///home/blue/sources/playing-with-qt/playground",
+            "file:///home/blue/sources/kl-login-proxy",
+            "file:///home/blue/sources/orkestra",
             "file:///home/blue/sources/python-qt/playground",
             "file:///home/blue/sources/orkestra-core",
-            "file:///home/blue/sources/kl-login-proxy",
             "file:///home/blue/sources/kl-core-directory",
             "file:///home/blue/sources/majora-core-evaluations",
             "file:///home/blue/sources/bento",
             "file:///home/blue/sources/fafiec-core-evaluation",
             "file:///home/blue/sources/karbon-app",
             "file:///home/blue/sources/aurora-store",
-            "file:///home/blue/sources/orkestra",
             "file:///home/blue/sources/nutshell-ferrors",
             "file:///home/blue/sources/kl-sdk-directory",
             "file:///home/blue/sources/orkestra-studio",
@@ -100,8 +101,7 @@
             "file:///home/blue/sources/fafiec-admin",
             "file:///home/blue/sources/kl-core-profile-manager",
             "file:///home/blue/sources/play-core",
-            "file:///home/blue/sources/play-app",
-            "file:///home/blue/sources/squid-core-users"
+            "file:///home/blue/sources/play-app"
         ],
         "files2": [
             "file:///home/blue/sources/kl-core-directory/.gitignore",
@@ -210,14 +210,14 @@
     "themeBackground": "#1e1e1e",
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/blue/sources/python-qt/playground",
-            "backupPath": "/home/blue/.config/Code/Backups/f7e6c2128eab855f25e2b51bc41eb002",
+            "folder": "file:///home/blue/sources/playing-with-qt/playground",
+            "backupPath": "/home/blue/.config/Code/Backups/2b92c1bfdc892817fd5a3c95ff025078",
             "uiState": {
                 "mode": 1,
-                "x": 9,
-                "y": 9,
-                "width": 1080,
-                "height": 882
+                "x": 2575,
+                "y": 1053,
+                "width": 2057,
+                "height": 1410
             }
         },
         "openedWindows": []
@@ -266,7 +266,40 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "fsPath": "/home/blue/sources/python-qt/playground",
+                                        "fsPath": "/home/blue/sources/playing-with-qt/playground",
+                                        "external": "file:///home/blue/sources/playing-with-qt/playground",
+                                        "path": "/home/blue/sources/playing-with-qt/playground",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/sources/playing-with-qt/playground"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/blue/sources/kl-login-proxy",
+                                        "path": "/home/blue/sources/kl-login-proxy",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/sources/kl-login-proxy"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/blue/sources/orkestra",
+                                        "path": "/home/blue/sources/orkestra",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/sources/orkestra"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
                                         "external": "file:///home/blue/sources/python-qt/playground",
                                         "path": "/home/blue/sources/python-qt/playground",
                                         "scheme": "file"
@@ -284,17 +317,6 @@
                                     },
                                     "enabled": true,
                                     "label": "~/sources/orkestra-core"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/blue/sources/kl-login-proxy",
-                                        "path": "/home/blue/sources/kl-login-proxy",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/sources/kl-login-proxy"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -350,28 +372,6 @@
                                     },
                                     "enabled": true,
                                     "label": "~/sources/karbon-app"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/blue/sources/aurora-store",
-                                        "path": "/home/blue/sources/aurora-store",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/sources/aurora-store"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/blue/sources/orkestra",
-                                        "path": "/home/blue/sources/orkestra",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/sources/orkestra"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -527,8 +527,7 @@
                     },
                     {
                         "id": "workbench.action.files.saveAll",
-                        "label": "Save A&&ll",
-                        "enabled": false
+                        "label": "Save A&&ll"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -582,6 +581,13 @@
                                 {
                                     "id": "workbench.action.selectIconTheme",
                                     "label": "File &&Icon Theme"
+                                },
+                                {
+                                    "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "workbench.userDataSync.actions.manage",
+                                    "label": "Settings Sync is On"
                                 }
                             ]
                         }
@@ -819,7 +825,8 @@
                                 },
                                 {
                                     "id": "workbench.action.togglePanel",
-                                    "label": "Show &&Panel"
+                                    "label": "Show &&Panel",
+                                    "checked": true
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -1072,54 +1079,45 @@
                                 },
                                 {
                                     "id": "workbench.action.focusThirdEditorGroup",
-                                    "label": "Group &&3",
-                                    "enabled": false
+                                    "label": "Group &&3"
                                 },
                                 {
                                     "id": "workbench.action.focusFourthEditorGroup",
-                                    "label": "Group &&4",
-                                    "enabled": false
+                                    "label": "Group &&4"
                                 },
                                 {
                                     "id": "workbench.action.focusFifthEditorGroup",
-                                    "label": "Group &&5",
-                                    "enabled": false
+                                    "label": "Group &&5"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
                                     "id": "workbench.action.focusNextGroup",
-                                    "label": "&&Next Group",
-                                    "enabled": false
+                                    "label": "&&Next Group"
                                 },
                                 {
                                     "id": "workbench.action.focusPreviousGroup",
-                                    "label": "&&Previous Group",
-                                    "enabled": false
+                                    "label": "&&Previous Group"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
                                     "id": "workbench.action.focusLeftGroup",
-                                    "label": "Group &&Left",
-                                    "enabled": false
+                                    "label": "Group &&Left"
                                 },
                                 {
                                     "id": "workbench.action.focusRightGroup",
-                                    "label": "Group &&Right",
-                                    "enabled": false
+                                    "label": "Group &&Right"
                                 },
                                 {
                                     "id": "workbench.action.focusAboveGroup",
-                                    "label": "Group &&Above",
-                                    "enabled": false
+                                    "label": "Group &&Above"
                                 },
                                 {
                                     "id": "workbench.action.focusBelowGroup",
-                                    "label": "Group &&Below",
-                                    "enabled": false
+                                    "label": "Group &&Below"
                                 }
                             ]
                         }
