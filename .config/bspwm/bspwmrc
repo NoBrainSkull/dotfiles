@@ -3,7 +3,6 @@
 start-if-not-running sxhkd
 start-if-not-running configure-monitors
 start-if-not-running no-beep
-picom --experimental-backends --backend glx &
 
 case $(hostname | awk '{print tolower($0)}') in
 	# Use multiple monitors on my main computer
@@ -29,3 +28,4 @@ bspc config gapless_monocle      true
 
 bspc rule -a Kupfer.py focus=on
 feh --bg-fill ~/.wallpapers/pilot.png
+picom --experimental-backends --backend glx &
