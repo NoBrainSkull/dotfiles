@@ -1,0 +1,51 @@
+#include ".config/Xresources.d/apps/rxvt.d/rxvt"
+
+!!!! Generic properties
+
+*background:                      #272827
+*foreground:                      #657b83
+*fading:                          15
+*fadeColor:                       black
+*cursorColor:                     #16A085
+*pointerColorBackground:          #2B2C2B
+*pointerColorForeground:          #16A085
+
+!!!! Colors
+*.color0: #402e2e
+*.color1: #bf6161
+*.color2: #eb8b8b
+*.color3: #be8c8c
+*.color4: #c18181
+*.color5: #b48e8e
+*.color6: #d08888
+*.color7: #e9d8d8
+*.color8: #5e4343
+*.color9: #bf6161
+*.color10: #eb8b8b
+*.color11: #be8c8c
+*.color12: #c18181
+*.color13: #b48e8e
+*.color14: #bc8f8f
+*.color15: #f4ecec
+
+!!!! Xft
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+!!!! XTerm
+XTerm*background: #2b2b2b
+XTerm*foreground: #e7e7e7
+XTerm*pointerColor: #16A085
+XTerm*faceName: Fixed
+XTerm*faceSize: 11
+XTerm*reverseVideo:               on
+XTerm*selectToClipboard:          true
+
+!!!! Xcursor
+Xcursor.theme: breeze_cursors
+Xcursor.size:                     0
