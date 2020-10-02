@@ -1,5 +1,3 @@
-#include ".config/Xresources.d/apps/rxvt.d/rxvt"
-
 !!!! Generic properties
 
 *background:                      #272827
@@ -11,14 +9,17 @@
 *pointerColorForeground:          #16A085
 
 !!!! Colors
+
+#define accent #F44336
+
 *.color0: #402e2e
 *.color1: #bf6161
 *.color2: #eb8b8b
-*.color3: #be8c8c
+*.color3: accent
 *.color4: #c18181
 *.color5: #b48e8e
 *.color6: #d08888
-*.color7: #e9d8d8
+*.color7: #e9dede
 *.color8: #5e4343
 *.color9: #bf6161
 *.color10: #eb8b8b
@@ -29,7 +30,7 @@
 *.color15: #f4ecec
 
 !!!! Xft
-Xft.dpi: 96
+Xft.dpi: 120
 Xft.antialias: true
 Xft.hinting: true
 Xft.rgba: rgb
