@@ -7,9 +7,9 @@ configuration {
     font: "Fira Code 15";
     none: #0000;
     bg: #0009;
-    accent: #C18181;
+    accent: #cc0403;
     fcolor: #FFF;
-    tile: #bf6161;
+    tile: #f23333;
 }
 
 window {

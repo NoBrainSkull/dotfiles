@@ -1,0 +1,10 @@
+#!/bin/sh
+
+SCRIPTS_FOLDER=".scripts"
+
+if [ -z "$1" ]; then
+    echo "Please provide a script filename from $SCRIPTS_FOLDER"
+    exit 1
+fi
+
+sudo ln -s "/home/$USER/$SCRIPTS_FOLDER/$1" /usr/bin/$1
