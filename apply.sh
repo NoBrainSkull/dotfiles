@@ -12,6 +12,7 @@ mkdir -p "/home/$USER/.wallpapers"
 mkdir -p "/home/$USER/.scripts"
 
 stow -d "/home/$USER/sources" -t "/home/$USER" "dotfiles"
+spicetify update &> /dev/null
 
 if [ $? == 0 ]
 then

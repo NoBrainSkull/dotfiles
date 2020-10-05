@@ -10,3 +10,4 @@
 .config/Code/TransportSecurity/
 .config/Code/User/
 .config/Code/**/*.json
+.config/spicetify/Extracted
