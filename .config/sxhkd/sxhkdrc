@@ -86,7 +86,7 @@ super + {o,i}
 	bspc wm -h on
 
 # focus or send to the given desktop
-super + {_,shift + }{ampersand,eacute,quotedbl,apostrophe,parenleft,minus,egrave,underscore,ccedilla,agrave}
+super + {_,shift + }{1-9,10}
 	bspc {desktop -f,node -d} '{1-9,10}'
 
 #
@@ -97,8 +97,8 @@ super + {_,shift + }{ampersand,eacute,quotedbl,apostrophe,parenleft,minus,egrave
 super + ctrl + {Left,Down,Up,Right}
 	bspc node -p {west,south,north,east}
 
-# preselect the ratio
-super + ctrl + {ampersand,eacute,quotedbl,apostrophe,parenleft,minus,egrave,underscore,ccedilla}
+# preselect the ratio-
+super + ctrl + {1-9}
 	bspc node -o 0.{1-9}
 
 # cancel the preselection for the focused node
@@ -132,3 +132,17 @@ super + {h,j,k,l}
 # take a screenshot
 Print
     flameshot gui
+XF86AudioRaiseVolume
+    volumeControl up
+XF86AudioLowerVolume
+    volumeControl down
+XF86AudioMute
+    volumeControl mute
+XF86AudioStop
+    mediaControl stop
+XF86AudioPlay
+    mediaControl play
+XF86AudioNext
+    mediaControl next
+XF86AudioPrev
+    mediaControl prev
