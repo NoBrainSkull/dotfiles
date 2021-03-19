@@ -9,9 +9,21 @@
 super + Return
 	terminal
 
+super + shift + Return
+        bspc rule -a "*" --one-shot state=floating && terminal
+
 # program launcher
 super + @space
 	launcher
+
+super + shift + @space
+        bspc rule -a "*" --one-shot state=floating && launcher
+
+XF86Launch5
+	launcher
+
+shift + XF86Launch5
+        bspc rule -a "*" --one-shot state=floating && launcher
 
 # make sxhkd reload its configuration files:
 super + shift + Escape

@@ -23,11 +23,14 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 
 ## RICE
 bspc config border_width       3 
-bspc config window_gap          12
+bspc config window_gap          50
 bspc config focus_follows_pointer true
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
+bspc config remove_unplugged_monitor true
+bspc config center_pseudo-tiled false
+bspc config focused_border_color "#f2777a"
 bspc rule -a Kupfer.py focus=on
 
 feh --bg-fill ~/.wallpapers/pilot.png

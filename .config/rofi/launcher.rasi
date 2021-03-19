@@ -64,14 +64,14 @@
 
 
 * {
-  accent:           #f527c4;
+  accent:           #f2777a;
   background:       #282828;
   background-light: #282828;
   background-focus: #1d2021;
   foreground:       #ebdbb2;
   foreground-list:  #ebdbb2;
-  on:               #f527c4;
-  off:              #fb4934;
+  on:               #f2777a;
+  off:              #EB2B0F;
 }
 
 * {
