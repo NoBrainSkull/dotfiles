@@ -151,10 +151,10 @@ XF86AudioLowerVolume
 XF86AudioMute
     volumeControl mute
 XF86AudioStop
-    mediaControl stop
+    playerctl stop
 XF86AudioPlay
-    mediaControl play
+    playerctl play-pause
 XF86AudioNext
-    mediaControl next
+    playerctl next
 XF86AudioPrev
-    mediaControl prev
+    playerctl previous
