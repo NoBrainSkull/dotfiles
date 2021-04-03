@@ -1,0 +1,187 @@
+<eww>
+  <includes>
+  </includes>
+
+  <definitions>
+    <def name="section-title">
+      <box class="section-title-w" space-evenly="false">
+        <label text="{{ title }}" class="caption"/>
+        <label text="________________________________________________________________" class="caption"/>
+      </box>
+    </def>
+
+    <def name="time">
+      <box class="time-w hero">{{ time ?:'00:00' }}</box>
+    </def>
+
+
+    <def name="level-slider">
+      <box orientation="h" valign="center" halign="center" space-evenly="false" class="level-slider-w body">
+        <box class="slider-label"><box class="icon">{{ icon }}</box> {{ text }}</box>
+        [<scale active="{{active ?:false }}" value="{{value ?:0 }}" min="0" max="100" onchange="{{ onslide }}" />]
+      </box>
+    </def>
+    <!-- duplicated because of definitions variable value refreshing bug from eww (report it) -->
+    <def name="music-level">
+      <box orientation="h" valign="center" halign="center" space-evenly="false" class="level-slider-w body">
+        <box class="slider-label"><box class="icon">{{ icon }}</box> {{ text }}</box>
+        [<scale active="{{active ?:false }}" value="{{default_sink_vol ?:0 }}" min="0" max="100" onchange="{{ onslide }}" />]
+      </box>
+    </def>
+    
+    <def name="tile">
+      <box orientation="v" space-evenly="false" halign="center" valign="center" class="tile-w {{ class }}">
+        <box class="subtitle icon mb-3">{{ icon }}</box>
+        <box class="">{{ line1 }}</box>
+        <box class="">{{ line2 }}</box>
+      </box>
+    </def>
+
+    <def name="speakers-tile">
+      <box orientation="v" space-evenly="false" halign="center" valign="center" class="tile-w {{ if default_sink_name == 'a2dp_sink' then '' else 'bordered activated' }}">
+        <box class="subtitle icon mb-3">{{ icon }}</box>
+        <box class="">{{ line1 }}</box>
+        <box class="">{{ line2 }}</box>
+      </box>
+    </def>
+    <def name="headset-tile">
+      <box orientation="v" space-evenly="false" halign="center" valign="center" class="tile-w {{ if default_sink_name == 'a2dp_sink' then 'bordered activated' else '' }}">
+        <box class="subtitle icon mb-3">{{ icon }}</box>
+        <box class="">{{ line1 }}</box>
+        <box class="">{{ line2 }}</box>
+      </box>
+    </def>
+    <def name="weather-tile">
+      <box orientation="v" space-evenly="false" halign="center" valign="center" class="tile-w {{ class }}">
+        <box class="subtitle icon mb-3">{{ icon }}</box>
+        <box class="">{{ weather_temp }}°C</box>
+        <box class="">{{ line2 }}</box>
+      </box>
+    </def>
+
+    <def name="bl-tile">
+      <box orientation="v" space-evenly="false" halign="center" valign="center" class="tile-w {{ if headset_connected == 'yes' then '' else 'not-activated' }}">
+        <box class="subtitle icon mb-3">{{ icon }}</box>
+        <box class="">{{ line1 }}</box>
+        <box class="">{{ line2 }}</box>
+      </box>
+    </def>
+
+    <def name="bar">
+      <box space-evenly="false" orientation="h" halign="center" valign="center" class="bar-w">
+        <box class="subtitle icon">{{ icon }}</box>
+        <label text="{{ text }}"/>
+      </box>
+    </def>
+  </definitions>
+
+  <variables>
+    <script-var name="time" interval="2s">date "+%H:%M"</script-var>  
+    <script-var name="headset_connected" interval="1s">bluetoothctl info 2C:27:9E:70:79:97 |grep Connected | cut -d' ' -f2-</script-var>  
+    <script-var name="default_sink_name" interval="200ms">pacmd stat | grep "sink name" | cut -d'.' -f3-</script-var>  
+    <script-var name="default_sink_vol" interval="200ms">amixer -D pulse sget Master | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d "%"</script-var>  
+    <script-var name="bl_name1" interval="10s">bluetoothctl info 2C:27:9E:70:79:97 |grep -i name |cut -d' ' -f2- | awk '{print $1}'</script-var>  
+    <script-var name="bl_name2" interval="10s">bluetoothctl info 2C:27:9E:70:79:97 |grep -i name |cut -d' ' -f2- | awk '{print $2}'</script-var>  
+    <script-var name="net_name1" interval="10s">nmcli -t -f NAME c show --active | awk '{print $1}'</script-var>  
+    <script-var name="net_name2" interval="1s">nmcli -t -f NAME c show --active | awk '{print $2}'</script-var>  
+    <script-var name="music_track" interval="1s">playerctl metadata xesam:title | cut -c-20</script-var>  
+    <script-var name="music_artist" interval="1s">playerctl metadata xesam:artist | cut -c-20</script-var>  
+    <script-var name="music_state" interval="500ms">playerctl status</script-var>  
+    <script-var name="weather_temp" interval="30m">weather-report -m lfqq | grep Temperature | awk '{print $2}'</script-var>  
+    <script-var name="weather_forecast" interval="30m">weather-report -m lfqq | grep Temperature | awk '{print $2}'</script-var>  
+  </variables>
+
+  <windows>
+    <window name="main" focusable="true">
+      <geometry height="1100px" width="500px" />
+      <widget>
+        <box>
+          <box orientation="v" space-evenly="false" valign="center" halign="center">
+            <section-title title="COCKPIT _"/>
+            <time />
+            <box class="mb-3" />
+            <level-slider icon="" text="fuel    " value="100" active="false" onslide=""/>
+            <level-slider icon="" text="lamps   " value="100" active="true" onslide=""/>
+            <music-level icon="" text="intercom" value="{{ default_sink_vol }}" active="true" onslide="amixer -q -D pulse sset Master {}%" />
+
+            <box style="margin-top: 20px;" />
+            
+            <box space-evenly="false" class="mt-4" halign="center">
+              <tile icon="" line1="clouds" line2="" class="" />
+              <weather-tile icon="" line2="" class="" />
+              <!-- <tile icon="" line1="15m" line2="" class="" /> -->
+              <button onclick="bluetoothctl connect 2C:27:9E:70:79:97 &"><bl-tile icon="" line1="{{ bl_name1 ?: 'no' }}" line2="{{ bl_name2 ?: 'device' }}" /></button>
+              <tile icon="" line1="{{ net_name1 ?: 'no' }}" line2="{{ net_name2 ?: 'connection' }}" class="" />
+            </box>
+
+            <box style="margin-top: 50px;" />
+
+            <!-- <section-title title="MISSION "/>
+            <box orientation="v">
+              <bar orientation="h" icon="" text="complete first rice" />
+              <level-slider icon="" text="" value="100" active="true" />
+              <box>
+                <box class="title icon"></box>
+                <box orientation="v">
+                  <label halign="end" text="from control tower" class="caption"/>
+                  <label halign="end" text="work." class="subtitle"/>
+                </box>
+              </box>
+            </box> -->
+            <section-title title="INTERCOM "/>
+            <box space-evenly="false" halign="center">
+              <button onclick="pacmd set-default-sink 'alsa_output.pci-0000_00_1b.0.analog-stereo'"><speakers-tile icon="" line1="speakers" line2="" /></button>
+              <button onclick="pacmd set-default-sink 'bluez_sink.2C_27_9E_70_79_97.a2dp_sink'"><headset-tile icon="" line1="headset" line2="" /></button>
+              <box space-evenly="false" valign="end" halign="start" orientation="v" class="ml-5">
+                <label text="INCOMING:" halign="start" class="caption" />
+                <label text="{{ music_track ?:'-' }}" halign="start" class="body" />
+                <label text="SENDER:" halign="start" class="caption" />
+                <label text="{{ music_artist ?:'-' }}" halign="start" class="body" />
+                <!-- <progress orientation="h" value="100" class="mt-5"/> -->
+                <box space-evenly="false" valign="center" halign="center" class="mt-3">
+                  <button class="body icon" onclick="playerctl previous"></button>
+                  <button class="body icon ml-3 mr-3" onclick="playerctl play-pause">{{ if music_state == 'Playing' then '' else '' }}</button>
+                  <button class="body icon" onclick="playerctl next"></button>
+                </box>
+              </box>
+            </box>
+
+            <box style="margin-top: 50px;" />
+
+            <section-title title="LIGHTS  _"/>
+            <level-slider icon="" text="cockpit  " value="100" active="true" onslide="" />
+            <level-slider icon="" text="crew room" value="40" active="true" onslide="" />
+            <level-slider icon="" text="airlock  " value="40" active="true" onslide="" />
+            <level-slider icon="" text="galley   " value="0" active="true" onslide="" />
+            <level-slider icon="" text="dorms    " value="0" active="true" onslide="" />
+
+            <box style="margin-top: 50px;" />
+
+            <section-title title="DRONES  _"/>
+            <box space-evenly="false" halign="center">
+              <tile icon="" line1="nut-1" line2="UP" class="" />
+              <tile icon="" line1="nut-2" line2="UP" class="" />
+              <tile icon="" line1="nut-3" line2="UP" class="" />
+              <tile icon="" line1="dat-0" line2="UP" class="" />
+            </box>
+            <box space-evenly="false" halign="center">
+              <tile icon="" line1="ork-0" line2="UP" class="" />
+              <tile icon="" line1="maj-0" line2="UP" class="" />
+              <tile icon="" line1="lab-0" line2="DOWN" class="bordered activated" />
+              <tile icon="" line1="k-base" line2="UP" class="" />
+            </box>
+
+            <box style="margin-top: 50px;" />
+
+            <section-title title="CONTROLS "/>
+            <box space-evenly="false" halign="center">
+              <button onclick="start-if-not-running power-menu"><tile icon="" line1="mission" line2="complete" class="bordered " /></button>
+              <button onclick="flameshot gui &"><tile icon="" line1="crew" line2="assist." class="bordered " /></button>
+              <button onclick="glitchlock ~/sources/perso/glitchlock/stop.png &"><tile icon="" line1="autopilot" line2="OFF" class="bordered " /></button>
+            </box>
+          </box>
+        </box>
+      </widget>
+    </window>
+  </windows>
+</eww>
