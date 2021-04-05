@@ -89,6 +89,8 @@
     <script-var name="music_state" interval="500ms">playerctl status</script-var>  
     <script-var name="weather_temp" interval="30m">weather-report -m lfqq | grep Temperature | awk '{print $2}'</script-var>  
     <script-var name="weather_forecast" interval="30m">weather-report -m lfqq | grep Temperature | awk '{print $2}'</script-var>  
+    <script-var name="battery" interval="10s">cat /sys/class/power_supply/BAT0/capacity</script-var>  
+    <script-var name="brightness" interval="200ms">xbacklight -get | cut -d'.' -f-1</script-var>
   </variables>
 
   <windows>
@@ -100,9 +102,9 @@
             <section-title title="COCKPIT _"/>
             <time />
             <box class="mb-3" />
-            <level-slider icon="" text="fuel    " value="100" active="false" onslide=""/>
-            <level-slider icon="" text="lamps   " value="100" active="true" onslide=""/>
-            <music-level icon="" text="intercom" value="{{ default_sink_vol }}" active="true" onslide="amixer -q -D pulse sset Master {}%" />
+            <level-slider icon="" text="fuel    " value="{{ battery }}" active="false" onslide=""/>
+            <level-slider icon="" text="lamps   " value="{{ brightness }}" active="true" onslide="xbacklight -set {}%"/>
+            <level-slider icon="" text="intercom" value="{{ default_sink_vol }}" active="true" onslide="amixer -q -D pulse sset Master {}%" />
 
             <box style="margin-top: 20px;" />
             
