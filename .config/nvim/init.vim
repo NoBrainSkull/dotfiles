@@ -1,53 +1,43 @@
 " ~~~ Plugins ~~~
-" call plug#begin('~/.local/share/nvim/plugged')
-" Plug 'shougo/deoplete.nvim'
-" Plug 'ctrlpvim/ctrlp.vim'
-" Plug 'itchyny/lightline.vim'
-" Plug 'tpope/vim-commentary'
-" Plug 'tpope/vim-surround'
-" Plug 'lambdalisue/suda.vim'
-" Plug 'jiangmiao/auto-pairs'
-" Plug 'machakann/vim-highlightedyank'
-" Plug 'vimwiki/vimwiki'
-" Plug 'tpope/vim-markdown'
-" Plug 'nelstrom/vim-markdown-folding'
-" call plug#end()
+call plug#begin('~/.local/share/nvim/plugged')
+Plug 'itchyny/lightline.vim'
+Plug 'tpope/vim-surround'
+Plug 'lambdalisue/suda.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-markdown'
+Plug 'nelstrom/vim-markdown-folding'
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'kyazdani42/nvim-tree.lua'
+call plug#end()
 
+" colorscheme
+colorscheme mission-complete
 " Highlight the line on which the cursor lives.
 set nocursorline
-
 " Always show at least one line above/below the cursor.
 set scrolloff=1
 " Always show at least one line left/right of the cursor.
 set sidescrolloff=5
-
 " Relative line numbers
 set number relativenumber
-
 " Highlight matching pairs of brackets. Use the '%' character to jump between them.
 set matchpairs+=<:>
-
 " Display different types of white spaces.
 set list
 set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
-
 " Use system clipboard
 set clipboard=unnamedplus
-
 " Remove timeout for partially typed commands
 set notimeout
-
 " F keys
 " Quick write session with F2
 map <F2> :mksession! ~/.vim_session<cr>
 " And load session with F3
 map <F3> :source ~/.vim_session<cr>
-
 " Fix indentation
 map <F7> gg=G<C-o><C-o>
 " Toggle auto change directory
 map <F8> :set autochdir! autochdir?<CR>
-
 " Toggle vertical line
 set colorcolumn=
 fun! ToggleCC()
@@ -59,12 +49,6 @@ fun! ToggleCC()
   endif
 endfun
 nnoremap <silent> <F9> :call ToggleCC()<CR>
-
-" Beginning and end of line
-imap <C-a> <home>
-imap <C-e> <end>
-cmap <C-a> <home>
-cmap <C-e> <end>
 
 " Control-S Save
 nmap <C-S> :w<cr>
@@ -80,104 +64,12 @@ vmap <C-C> y
 imap <C-V> <esc>pa
 cmap <C-V> <C-r>0
 
-" Window Movement
-nmap <M-h> <C-w>h
-nmap <M-j> <C-w>j
-nmap <M-k> <C-w>k
-nmap <M-l> <C-w>l
-
-" Resizing
-nmap <C-M-H> 2<C-w><
-nmap <C-M-L> 2<C-w>>
-nmap <C-M-K> <C-w>-
-nmap <C-M-J> <C-w>+
-
-" Insert mode movement
-imap <M-h> <left>
-imap <M-j> <down>
-imap <M-k> <up>
-imap <M-l> <right>
-imap <M-f> <C-right>
-imap <M-b> <C-left>
-
-" Spacemacs-like keybinds
-" Change <leader> bind from default \
-" nnoremap <space> <nop>
-" let mapleader=" "
-
-" Make ci( work like quotes do
-function! New_cib()
-    if search("(","bn") == line(".")
-        sil exe "normal! f)ci("
-        sil exe "normal! l"
-        startinsert
-    else
-        sil exe "normal! f(ci("
-        sil exe "normal! l"
-        startinsert
-    endif
-endfunction
-
-" And for curly brackets
-function! New_ciB()
-    if search("{","bn") == line(".")
-        sil exe "normal! f}ci{"
-        sil exe "normal! l"
-        startinsert
-    else
-        sil exe "normal! f{ci{"
-        sil exe "normal! l"
-        startinsert
-    endif
-endfunction
-
-nnoremap ci( :call New_cib()<CR>
-nnoremap cib :call New_cib()<CR>
-nnoremap ci{ :call New_ciB()<CR>
-nnoremap ciB :call New_ciB()<CR>
-
-" Alt-m for creating a new line in insert mode
-imap <M-m> <esc>o
-
-" netrw configuration
-let g:netrw_browse_split = 0
-let g:netrw_altfile = 1
-
-" Cycle windows
-nmap <M-o> <C-W>w
-vmap <M-o> <C-W>w
-tmap <M-o> <esc><C-W>w
-imap <M-o> <esc><C-W>w
-
-" Command mode history
-cmap <M-p> <up>
-cmap <M-n> <down>
-cmap <M-k> <up>
-cmap <M-j> <down>
-
-" Back to normal mode from insert
-" inoremap jk <esc>
-" inoremap JK <esc>
-
 " Manually refresh file
 nmap <F5> :e!<cr>
 
 " Indentation
-set smarttab
-set expandtab
-set tabstop=8
-set softtabstop=4
-set shiftwidth=4
-
-"set smartindent
 set autoindent
-"set cindent
 
-set nocompatible
-filetype plugin indent on
-
-" Write buffer through sudo (works on vim but not neovim)
-" cnoreabbrev w!! w !sudo -S tee % >/dev/null
 " Neovim: suda plugin
 cnoreabbrev w!! w suda://%
 
@@ -190,64 +82,18 @@ set mouse=a
 "Case insensitive searching
 set ignorecase
 
-"Will automatically switch to case sensitive if you use any capitals
-set smartcase
-
-" Auto toggle smart case of for ex commands
-" Assumes 'set ignorecase smartcase'
-augroup dynamic_smartcase
-    autocmd!
-    autocmd CmdLineEnter : set nosmartcase
-    autocmd CmdLineLeave : set smartcase
-augroup END
-
-" Substitute live preview
-set inccommand=nosplit
-
 " Markdown Folding
 let g:markdown_fold_style = 'nested'
-
-" Vimwiki
-" let g:vimwiki_list = [{'path': '~/dox/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
-let g:vimwiki_global_ext=0
-let g:vimwiki_table_mappings=0
-let g:vimwiki_folding='expr'
-nmap <leader>vv <Plug>VimwikiIndex
-nmap <leader>vV <Plug>VimwikiTabIndex
-nmap <leader>vs <Plug>VimwikiUISelect
-nmap <leader>vi <Plug>VimwikiDiaryIndex
-nmap <leader>vdd <Plug>VimwikiMakeDiaryNote
-nmap <leader>vDD <Plug>VimwikiTabMakeDiaryNote
-nmap <leader>vdy <Plug>VimwikiMakeYesterdayDiaryNote
-nmap <leader>vdt <Plug>VimwikiMakeTomorrowDiaryNote
-nmap <M-space> <Plug>VimwikiToggleListItem
 
 " Highlighted yank (-1 for persistent)
 let g:highlightedyank_highlight_duration = 400
 
-" If lightline/airline is enabled, don't show mode under it
-set noshowmode
-
 " Shell
 set shell=/bin/zsh
 
-" Ctrlp
-let g:ctrlp_switch_buffer = '0'
-" Useful for large projects
-let g:ctrlp_max_files=0
-let g:ctrlp_max_depth=10
-" So that it does not only index starting from current directory
-let g:ctrlp_working_path_mode = ""
-let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
-" Use ag AKA the_silver_searcher for indexing. Faster!!!
-" TIP: Use ~/.ignore to ignore directories/files
-" set grepprg=ag\ --nogroup\ --nocolor
-" let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
-""if executable('ag')
-""  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-""endif
-let g:ctrlp_show_hidden =1
-let g:ctrlp_clear_cache_on_exit = 0
+" Terminal
+tnoremap <C-i>:lua require('terminal').toggle()<CR>
+nnoremap <C-i>:lua require('terminal').toggle()<CR>
 
 " Lightline
 " Get default from :h lightline
@@ -335,29 +181,81 @@ let g:lightline.enable = {
     \ 'tabline': 1
     \ }
 
-" deoplete
-let g:deoplete#enable_at_startup = 1
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-
-" Clear search highlighting with Escape key
-nnoremap <silent><esc> :noh<return><esc>
-
-" Allow color schemes to do bright colors without forcing bold.
-if &t_Co == 8 && $TERM !~# '^linux\|^Eterm'
-  set t_Co=16
-endif
-
-set wildmenu
-
 set encoding=utf8
 scriptencoding utf-8
-
-" Colorscheme
-colorscheme lena
-set fillchars=vert::
 
 " Restore last cursor position and marks on open
 au BufReadPost *
          \ if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'commit' 
          \ |   exe "normal! g`\""
          \ | endif
+
+" Tree config
+let g:nvim_tree_side = 'left' "left by default
+let g:nvim_tree_width = 40 "30 by default
+let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache' ] "empty by default
+let g:nvim_tree_gitignore = 1 "0 by default
+let g:nvim_tree_auto_open = 1 "0 by default, opens the tree when typing `vim $DIR` or `vim`
+let g:nvim_tree_auto_close = 1 "0 by default, closes the tree when it's the last window
+let g:nvim_tree_auto_ignore_ft = [] "empty by default, don't auto open tree on specific filetypes.
+let g:nvim_tree_quit_on_open = 1 "0 by default, closes the tree when you open a file
+let g:nvim_tree_follow = 1 "0 by default, this option allows the cursor to be updated when entering a buffer
+let g:nvim_tree_indent_markers = 1 "0 by default, this option shows indent markers when folders are open
+let g:nvim_tree_hide_dotfiles = 1 "0 by default, this option hides files and folders starting with a dot `.`
+let g:nvim_tree_git_hl = 1 "0 by default, will enable file highlight for git attributes (can be used without the icons).
+let g:nvim_tree_root_folder_modifier = ':~' "This is the default. See :help filename-modifiers for more options
+let g:nvim_tree_tab_open = 1 "0 by default, will open the tree when entering a new tab and the tree was previously open
+let g:nvim_tree_width_allow_resize  = 1 "0 by default, will not resize the tree when opening a file
+let g:nvim_tree_disable_netrw = 0 "1 by default, disables netrw
+let g:nvim_tree_hijack_netrw = 0 "1 by default, prevents netrw from automatically opening when opening directories (but lets you keep its other utilities)
+let g:nvim_tree_add_trailing = 1 "0 by default, append a trailing slash to folder names
+let g:nvim_tree_group_empty = 1 " 0 by default, compact folders that only contain a single folder into one node in the file tree
+let g:nvim_tree_lsp_diagnostics = 1 "0 by default, will show lsp diagnostics in the tree. See :help nvim_tree_lsp_diagnostics
+let g:nvim_tree_show_icons = {
+    \ 'git': 1,
+    \ 'folders': 0,
+    \ 'files': 0,
+    \ }
+"If 0, do not show the icons for one of 'git' 'folder' and 'files'
+"1 by default, notice that if 'files' is 1, it will only display
+"if nvim-web-devicons is installed and on your runtimepath
+
+" default will show icon by default if no icon is provided
+" default shows no icon by default
+let g:nvim_tree_icons = {
+    \ 'default': '',
+    \ 'symlink': '',
+    \ 'git': {
+    \   'unstaged': "✗",
+    \   'staged': "✓",
+    \   'unmerged': "",
+    \   'renamed': "➜",
+    \   'untracked': "★",
+    \   'deleted': "",
+    \   'ignored': "◌"
+    \   },
+    \ 'folder': {
+    \   'default': "",
+    \   'open': "",
+    \   'empty': "",
+    \   'empty_open': "",
+    \   'symlink': "",
+    \   'symlink_open': "",
+    \   }
+    \ }
+
+lua << EOF
+require'nvim-web-devicons'.setup { default = true; }
+EOF
+
+nnoremap <C-b> :NvimTreeToggle<CR>
+nnoremap <leader>r :NvimTreeRefresh<CR>
+nnoremap <C-e> :NvimTreeFindFile<CR>
+" NvimTreeOpen and NvimTreeClose are also available if you need them
+
+set termguicolors " this variable must be enabled for colors to be applied properly
+highlight NvimTreeFolderIcon guifg= #f2777a
+highlight NvimTreeFolderName guifg = #f2777a
+
+" a list of groups can be found at `:help nvim_tree_highlight`
+highlight NvimTreeFolderIcon guibg=blue

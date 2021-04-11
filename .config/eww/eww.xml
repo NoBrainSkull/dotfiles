@@ -10,22 +10,15 @@
       </box>
     </def>
 
-    <def name="time">
-      <box class="time-w hero">{{ time ?:'00:00' }}</box>
-    </def>
-
-
     <def name="level-slider">
       <box orientation="h" valign="center" halign="center" space-evenly="false" class="level-slider-w body">
-        <box class="slider-label"><box class="icon">{{ icon }}</box> {{ text }}</box>
-        [<scale active="{{active ?:false }}" value="{{value ?:0 }}" m="0" max="100" onchange="{{ onslide }}" />]
-      </box>
-    </def>
-    <!-- duplicated because of definitions variable value refreshing bug from eww (report it) -->
-    <def name="music-level">
-      <box orientation="h" valign="center" halign="center" space-evenly="false" class="level-slider-w body">
-        <box class="slider-label"><box class="icon">{{ icon }}</box> {{ text }}</box>
-        [<scale active="{{active ?:false }}" value="{{default_sink_vol ?:0 }}" m="0" max="100" onchange="{{ onslide }}" />]
+          <box class="slider-label">
+              <button onclick="{{ onclick }}">
+                  <box class="icon">{{ icon }}</box>
+              </button>
+              {{ text }}
+        </box>
+        [<scale active="{{active ?:false }}" value="{{value ?:0 }}" min="0" max="100" onchange="{{ onslide }}" />]
       </box>
     </def>
 
@@ -38,7 +31,7 @@
     </def>
 
     <def name="server-tile">
-        <tile icon="" line1="{{ status }}" line2="{{ if 500 == 200 then 'UP' else 'DOWN' }}"/>
+        <tile icon="" line1="{{ line1 }}" line2="{{ status ?: 'DOWN' }}" class="tile-w {{ class }}" />
     </def>
 </definitions>
 
@@ -50,46 +43,48 @@
     <script-var name="default_sink_vol" interval="200ms">amixer -D pulse sget Master | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d "%"</script-var>  
     <script-var name="bl_name1" interval="10s">bluetoothctl info 2C:27:9E:70:79:97 |grep -i name |cut -d' ' -f2- | awk '{print $1}'</script-var>  
     <script-var name="bl_name2" interval="10s">bluetoothctl info 2C:27:9E:70:79:97 |grep -i name |cut -d' ' -f2- | awk '{print $2}'</script-var>  
-    <script-var name="net_name1" interval="10s">nmcli -t -f NAME c show --active | awk '{print $1}'</script-var>  
+    <script-var name="net_name1" interval="10s">nmcli -t -f NAME c show --active | head -n1 | awk '{print $1}'</script-var>  
     <script-var name="net_name2" interval="1s">nmcli -t -f NAME c show --active | awk '{print $2}'</script-var>  
     <script-var name="music_track" interval="1s">playerctl metadata xesam:title | cut -c-20</script-var>  
     <script-var name="music_artist" interval="1s">playerctl metadata xesam:artist | cut -c-20</script-var>  
     <script-var name="music_state" interval="500ms">playerctl status</script-var>  
     <script-var name="weather_temp" interval="1m">weather-report -m lfqq | grep Temperature | awk '{print $2}'</script-var>  
-    <script-var name="weather_forecast" interval="1m">curl "http://api.weatherstack.com/current?access_key=$WEATHER_STACK_KEY&query=$USER_CITY" -s | jq -r '.current.weather_descriptions[0]' </script-var>
-    <script-var name="weather_icon" interval="30m">/home/$USER/.config/eww/weather-icon.sh $(curl "http://api.weatherstack.com/current?access_key=$WEATHER_STACK_KEY&query=$USER_CITY" -s | jq -r '.current.weather_code')</script-var>
+    <script-var name="weather_forecast" interval="1h">curl "http://api.weatherstack.com/current?access_key=$WEATHER_STACK_KEY&query=$USER_CITY" -s | jq -r '.current.weather_descriptions[0]' </script-var>
+    <script-var name="weather_icon" interval="1h">/home/$USER/.config/eww/weather-icon.sh $(curl "http://api.weatherstack.com/current?access_key=$WEATHER_STACK_KEY&query=$USER_CITY" -s | jq -r '.current.weather_code')</script-var>
     <script-var name="battery" interval="10s">cat /sys/class/power_supply/BAT0/capacity</script-var>  
     <script-var name="brightness" interval="200ms">xbacklight -get | cut -d'.' -f-1</script-var>
-    <script-var name="nut1" interval="1m">curl -i https://keyro.fr -s |grep HTTP/2 | cut -d' ' -f2-</script-var>
-    <script-var name="nut2" interval="1m">curl -i https://keyro.fr -s |grep HTTP/2 | cut -d' ' -f2-</script-var>
-    <script-var name="nut3" interval="1m">curl -i https://keyro.fr -s |grep HTTP/2 | cut -d' ' -f2-</script-var>
-    <script-var name="dat0" interval="1m">curl -i https://keyro.fr -s |grep HTTP/2 | cut -d' ' -f2-</script-var>
-    <script-var name="ork0" interval="1m">curl -i https://keyro.fr -s |grep HTTP/2 | cut -d' ' -f2-</script-var>
-    <script-var name="maj0" interval="1m">curl -i https://keyro.fr -s |grep HTTP/2 | cut -d' ' -f2-</script-var>
-    <script-var name="lab0" interval="1m">curl -i https://keyro.fr -s |grep HTTP/2 | cut -d' ' -f2-</script-var>
-    <script-var name="kbase">curl -i https://keyro.fr -s |grep HTTP/2 | cut -d' ' -f2-</script-var>
+    <script-var name="nut1" interval="1m">if [ -z "$(curl -i 'https://keyro.fr' -s | grep 'HTTP/2 200')" ]; then echo 'DOWN' ; else echo 'UP' ; fi </script-var>
+    <script-var name="nut2" interval="1m">if [ -z "$(curl -i 'https://keyro.fr' -s | grep 'HTTP/2 200')" ]; then echo 'DOWN' ; else echo 'UP' ; fi </script-var>
+    <script-var name="nut3" interval="1m">if [ -z "$(curl -i 'https://keyro.fr' -s | grep 'HTTP/2 200')" ]; then echo 'DOWN' ; else echo 'UP' ; fi </script-var>
+    <script-var name="dat0" interval="1m">if [ -z "$(curl -i 'https://keyro.fr' -s | grep 'HTTP/2 200')" ]; then echo 'DOWN' ; else echo 'UP' ; fi </script-var>
+    <script-var name="ork0" interval="1m">if [ -z "$(curl -i 'https://keyro.fr' -s | grep 'HTTP/2 200')" ]; then echo 'DOWN' ; else echo 'UP' ; fi </script-var>
+    <script-var name="maj0" interval="1m">if [ -z "$(curl -i 'https://keyro.fr' -s | grep 'HTTP/2 200')" ]; then echo 'DOWN' ; else echo 'UP' ; fi </script-var>
+    <script-var name="lab0" interval="1m">if [ -z "$(curl -i 'https://keyro.fr' -s | grep 'HTTP/2 200')" ]; then echo 'DOWN' ; else echo 'UP' ; fi </script-var>
+    <script-var name="kbase" interval="1m">if [ -z "$(curl -i 'https://keyro.fr' -s | grep 'HTTP/2 200')" ]; then echo 'DOWN' ; else echo 'UP' ; fi </script-var>
+    <script-var name="time" interval="1s">date "+%H:%M"</script-var>
+    <script-var name="date" interval="1s">date "+%d.%m"</script-var>
 
   </variables>
 
   <windows>
-    <window name="main" focusable="false">
+    <window name="main" focusable="true">
       <geometry height="1100px" width="500px" />
       <widget>
         <box>
           <box orientation="v" space-evenly="false" valign="center" halign="center">
             <section-title title="COCKPIT _"/>
-            <time />
+            <box class="time-w hero">{{ time ?:'00:00' }}</box>
+            <box>{{ date }}</box>
             <box class="mb-3" />
-            <level-slider icon="" text="fuel    " value="{{ battery?: 100 }}" active="false" onslide=""/>
-            <level-slider icon="" text="lamps   " value="{{ brightness?: 100 }}" active="true" onslide="xbacklight -set {}%"/>
-            <level-slider icon="" text="intercom" value="{{ default_sink_vol }}" active="true" onslide="amixer -q -D pulse sset Master {}%" />
+            <level-slider icon="" text="fuel    " value="{{ battery?: 100 }}" active="false" onslide="" onclick=""/>
+            <level-slider icon="" text="lamps   " value="{{ brightness?: 100 }}" active="true" onslide="xbacklight -set {}%" onclick=""/>
+            <level-slider icon="" text="intercom" value="{{ default_sink_vol }}" active="true" onslide="amixer -q -D pulse sset Master {}%" onclick="" />
 
             <box style="margin-top: 20px;" />
-            
+
             <box space-evenly="false" class="mt-4" halign="center">
               <tile icon="{{ weather_icon}}" line1="{{ weather_forecast }}" line2="" class="" />
-              <tile icon="" line1="{{ weather_temp }}" line2="" class="" />
-              <!-- <tile icon="" line1="15m" line2="" class="" /> -->
+              <tile icon="" line1="{{ weather_temp }}°C" line2="" class="" />
               <button onclick="bluetoothctl connect 2C:27:9E:70:79:97 &">
                   <tile icon="" line1="{{ bl_name1 ?: 'no' }}" line2="{{ bl_name2 ?: 'device' }}" class="tile-w {{ if headset_connected == 'yes' then '' else 'not-activated' }}" />
               </button>
@@ -105,11 +100,10 @@
                   <tile icon="" line1="headset" line2="" class="tile-w {{ if default_sink_name == 'a2dp_sink' then 'bordered activated' else '' }}"/>
               </button>
               <box space-evenly="false" valign="end" halign="start" orientation="v" class="ml-5">
-                <label text="INCOmG:" halign="start" class="caption" />
+                <label text="INCOMING:" halign="start" class="caption" />
                 <label text="{{ music_track ?:'-' }}" halign="start" class="body" />
                 <label text="SENDER:" halign="start" class="caption" />
                 <label text="{{ music_artist ?:'-' }}" halign="start" class="body" />
-                <!-- <progress orientation="h" value="100" class="mt-5"/> -->
                 <box space-evenly="false" valign="center" halign="center" class="mt-3">
                   <button class="body icon" onclick="playerctl previous"></button>
                   <button class="body icon ml-3 mr-3" onclick="playerctl play-pause">{{ if music_state == 'Playing' then '' else '' }}</button>
@@ -121,29 +115,29 @@
             <box style="margin-top: 50px;" />
 
             <section-title title="LIGHTS  _"/>
-            <level-slider icon="" text="cockpit  " value="100" active="true" onslide="" />
-            <level-slider icon="" text="crew room" value="40" active="true" onslide="" />
-            <level-slider icon="" text="airlock  " value="40" active="true" onslide="" />
-            <level-slider icon="" text="galley   " value="0" active="true" onslide="" />
-            <level-slider icon="" text="dorms    " value="0" active="true" onslide="" />
+            <level-slider icon="" text="cockpit  " value="100" active="true" onslide="huectl --set 'office' {}%" onclick="huectl --toggle 'office'" />
+            <level-slider icon="" text="crew room" value="40" active="true" onslide="huectl --set 'living_room' {}%" onclick="huectl --toggle 'living_room'" />
+            <level-slider icon="" text="airlock  " value="40" active="true" onslide="huectl --set 'entryway' {}%" onclick="huectl --toggle 'entryway'" />
+            <level-slider icon="" text="galley   " value="0" active="true" onslide="huectl --set 'kitchen' {}%" onclick="huectl --toggle 'kitchen'" />
+            <level-slider icon="" text="dorms    " value="0" active="true" onslide="huectl --set 'bedroom' {}%" onclick="huectl --toggle 'bedroom'" />
 
             <box style="margin-top: 50px;" />
 
             <section-title title="DRONES  _"/>
             <box space-evenly="false" halign="center">
-                <server-tile line1="nut-1" status="{{ nut1 }}" />
-                <tile icon="" line1="nut-2" line2="UP" class="" />
-                <tile icon="" line1="nut-3" line2="UP" class="" />
-                <tile icon="" line1="dat-0" line2="UP" class="" />
+                <server-tile line1="nut-1" status="{{ nut1 }}" class="{{ if nut1  == 'DOWN' then 'bordered activated' else '' }}" />
+                <server-tile line1="nut-2" status="{{ nut2 }}" class="{{ if nut2  == 'DOWN' then 'bordered activated' else '' }}" />
+                <server-tile line1="nut-3" status="{{ nut3 }}" class="{{ if nut3  == 'DOWN' then 'bordered activated' else '' }}" />
+                <server-tile line1="dat-0" status="{{ dat0 }}" class="{{ if dat0  == 'DOWN' then 'bordered activated' else '' }}" />
             </box>
             <box space-evenly="false" halign="center">
-              <tile icon="" line1="ork-0" line2="UP" class="" />
-              <tile icon="" line1="maj-0" line2="UP" class="" />
-              <tile icon="" line1="lab-0" line2="DOWN" class="bordered activated" />
-              <tile icon="" line1="k-base" line2="UP" class="" />
+                <server-tile line1="ork-0" status="{{ ork0 }}" class="{{ if ork0  == 'DOWN' then 'bordered activated' else '' }}" />
+                <server-tile line1="maj-0" status="{{ maj0 }}" class="{{ if maj0  == 'DOWN' then 'bordered activated' else '' }}" />
+                <server-tile line1="lab-0" status="{{ lab0 }}" class="{{ if lab0  == 'DOWN' then 'bordered activated' else '' }}" />
+                <server-tile line1="k-base" status="{{ kbase }}" class="{{ if kbase  == 'DOWN' then 'bordered activated' else '' }}" />
             </box>
 
-            <box style="margin-top: 50px;" />
+            <box style="margin-top: 30px;" />
 
             <section-title title="CONTROLS "/>
             <box space-evenly="false" halign="center">
