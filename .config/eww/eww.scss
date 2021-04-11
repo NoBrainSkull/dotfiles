@@ -23,11 +23,11 @@ $white:         #f2f0ec;
 }
 
 /* typography */
-.hero { font-size: 80px }
-.title { font-size: 36px }
-.subtitle { font-size: 24px }
-.body { font-size: 18px; }
-.caption { font-size: 10px; }
+.hero { font-size: 90px }
+.title { font-size: 46px }
+.subtitle { font-size: 34px }
+.body { font-size: 28px; }
+.caption { font-size: 18px; }
 
 /* layout
 * use this as inline css in windows.
@@ -58,7 +58,7 @@ $white:         #f2f0ec;
 .mr-5 { margin-right: 20px }
 
 /* windows */
-.main {
+.main, .system_status, .ecosystem, .music, .probes, .commands, .lights {
   background-color: $black;
 }
 
