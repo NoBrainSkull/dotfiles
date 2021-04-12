@@ -11,14 +11,15 @@
     </def>
 
     <def name="level-slider">
-      <box orientation="h" valign="center" halign="center" space-evenly="false" class="level-slider-w body">
+      <box orientation="h" valign="center" halign="center" space-evenly="false" class="level-slider-w body mr-5 mt-3 mb-3">
           <box class="slider-label">
               <button onclick="{{ onclick }}">
                   <box class="icon">{{ icon }}</box>
               </button>
               {{ text }}
         </box>
-        [<scale active="{{active ?:false }}" value="{{value ?:0 }}" min="0" max="100" onchange="{{ onslide }}" />]
+	[<scale active="{{active ?:false }}" value="{{value ?:0 }}" min="0" max="100" onchange="{{ onslide }}" />]
+	<box class="mr-5" />
       </box>
     </def>
 
@@ -104,7 +105,7 @@
 	<geometry height="250" width="250" />
 	    <widget>
 		    <box>
-				<box orientation="v">
+				<box orientation="v" space-evenly="false" halign="center" valign="center">
 					<level-slider icon="" text="cockpit  " value="100" active="true" onslide="huectl --set 'office' {}%" onclick="huectl --toggle 'office'" />
             <level-slider icon="" text="crew room" value="40" active="true" onslide="huectl --set 'living_room' {}%" onclick="huectl --toggle 'living_room'" />
             <level-slider icon="" text="airlock  " value="40" active="true" onslide="huectl --set 'entryway' {}%" onclick="huectl --toggle 'entryway'" />
@@ -119,13 +120,14 @@
 	<geometry height="250" width="250" />
 	    <widget>
 		    <box>
-				<box orientation="v">
-<box space-evenly="false" halign="center">
-                <button onclick="pacmd set-default-sink 'alsa_output.pci-0000_00_1b.0.analog-stereo'"><tile icon="" line1="speakers" line2="" class="tile-w {{ if default_sink_name == '0.analog-stereo' then 'bordered activated' else '' }}" /></button>
+<box space-evenly="false" halign="center" valign="center">
+		<button onclick="pacmd set-default-sink 'alsa_output.pci-0000_00_1b.0.analog-stereo'">
+			<tile icon="" line1="speakers" line2="" class="tile-w {{ if default_sink_name == '0.analog-stereo' then 'bordered activated' else '' }}" />
+		</button>
               <button onclick="pacmd set-default-sink 'bluez_sink.2C_27_9E_70_79_97.a2dp_sink'">
-                  <tile icon="" line1="headset" line2="" class="tile-w {{ if default_sink_name == 'a2dp_sink' then 'bordered activated' else '' }}"/>
+        		<tile icon="" line1="headset" line2="" class="tile-w {{ if default_sink_name == 'a2dp_sink' then 'bordered activated' else '' }}"/>
               </button>
-              <box space-evenly="false" valign="end" halign="start" orientation="v" class="ml-5">
+              <box space-evenly="false" valign="end" halign="start" orientation="v" class="player ml-5">
                 <label text="INCOMING:" halign="start" class="caption" />
                 <label text="{{ music_track ?:'-' }}" halign="start" class="body" />
                 <label text="SENDER:" halign="start" class="caption" />
@@ -138,7 +140,6 @@
               </box>
             </box>
 
-				</box>
 		    </box>
 	    </widget>
     </window>
