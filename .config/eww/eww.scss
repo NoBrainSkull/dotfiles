@@ -24,10 +24,10 @@ $white:         #f2f0ec;
 
 /* typography */
 .hero { font-size: 90px }
-.title { font-size: 46px }
-.subtitle { font-size: 34px }
-.body { font-size: 28px; }
-.caption { font-size: 18px; }
+.title { font-size: 36px }
+.subtitle { font-size: 28px }
+.body { font-size: 21px; }
+.caption { font-size: 12px; }
 
 /* layout
 * use this as inline css in windows.
@@ -87,6 +87,12 @@ $white:         #f2f0ec;
   padding: 12px 10px;
   margin: 5px;
   min-width: 55px;
+}
+.tile-w .text * {
+	color: $white;
+}
+.tile-w.icon * {
+	color: $red;
 }
 .tile-w.bordered { border: 1px solid $red; }
 .tile-w:not(.bordered).not-activated * { color: $dark-grey; }
