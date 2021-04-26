@@ -1,11 +1,7 @@
+# Mission completed
 
 <div>
-      _       _    __ _ _           
-   __| | ___ | |_ / _(_) | ___  ___ <br>
-  / _` |/ _ \| __| |_| | |/ _ \/ __|<br>
- | (_| | (_) | |_|  _| | |  __/\__ \<br>
-(_)__,_|\___/ \__|_| |_|_|\___||___/<br>
-                                    
+	<img src=".github/rice.png" />
 </div>
 
-Starting a repo to hold my rices.
+Starting a repo to hold my rices ! It's still a bit messy but you may want to have a look at .config folder. Next rice will be in this repo and the current one will be archive in an archives/ folder.
