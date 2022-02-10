@@ -82,7 +82,7 @@ window {
     background-color: var(background);
 }
 mainbox {
-    background-image: url("~/rice/current/cover.jpg");
+    background-image: url("~/dotfiles/assets/cover.jpg");
     padding: 200px 0px 0 0px;
     border:  0px;
     border-color: transparent;
