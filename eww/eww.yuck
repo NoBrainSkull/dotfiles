@@ -1,0 +1,85 @@
+(defvar accent "#f99f99")
+
+(defpoll h1 :interval "1m" :initial "0" `expr substr $(date +%H) 1 1`)
+(defpoll h2 :interval "1m" :initial "0" `expr substr $(date +%H) 2 1`)
+(defpoll m1 :interval "1m" :initial "0" `expr substr $(date +%M) 1 1`)
+(defpoll m2 :interval "1m" :initial "0" `expr substr $(date +%M) 2 1`)
+(defpoll today :interval "1h" :initial "Someday" `source ~/dotfiles/eww/scripts.sh && day_of_week`)
+
+(defwidget vtext [?text input]
+  (label
+    :class "time"
+    :wrap true
+    :height "600px"
+  :text input))
+
+(defwindow greeter
+  :monitor 0
+  :windowtype "desktop"
+  :stacking "bg"
+  :wm-ignore false
+  :geometry (geometry
+    :x "50px"
+    :y "10px"
+    :width "15%"
+    :height "35px"
+  :anchor "bottom left")
+  
+  (box
+    :halign "start"
+    :valign "center"
+    :space-evenly false
+    :spacing 50
+    
+    (box	:orientation "v"
+      :space-evenly false
+      :spacing -20
+      :class "time"
+      :valign "fill"
+      :style "color: ${accent};"
+      
+      (label :text h1)
+      (label :text h2)
+      (label :text m1)
+      (label :text m2))
+    
+    (box 	:orientation "vertical"
+      :valign "fill"
+      :spacing 10
+      :space-evenly false
+      
+      (box
+        :class "sub-title"
+        :halign "start"
+        
+        (label :class "accent" :markup "It's <span foreground='${accent}' font-weight='bold'>${today}</span>" ))
+      
+      (box
+        :class "hero-title"
+        :halign "start"
+        (label
+          :text "NO RELEASE BEFORE THE WEEKEND, NOBRAINSKULL!"
+          :xalign 0
+          :yalign 0
+        :wrap true))
+      
+      (box
+        :class "p"
+        :halign "start"
+        (label
+          :wrap true
+          :xalign 0
+          :text "Current temp at Lille is 23.5C. Sunny weather is expected. 133 436 new covid cases."
+        ))
+      
+      (box
+        :class "caption"
+        :halign "start"
+        :orientation "h"
+        :space-evenly false
+        :spacing 30
+        (label :text "14 ")
+        (label :text "2 ")
+        (label :text "12 ")
+        (label :text "1 "))
+    )))
