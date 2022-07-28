@@ -37,12 +37,11 @@
                       :valign "end"
                       :space-evenly false
                     (label :halign "start" :class "caption day" :text {today} )
-                    (label :halign "start" :class "caption" :text {time.timestamp})
+                    (label :halign "start" :class "caption" :text {time.timestamp}))
                 (label
                   :class "sub-title"
                   :text {quote_of_today}
                   :xalign 0
                   :yalign 0
                   :wrap false)))
-
-    )))
+    ))
