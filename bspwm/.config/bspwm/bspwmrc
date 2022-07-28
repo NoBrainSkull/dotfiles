@@ -43,3 +43,4 @@ nitrogen --restore
 dunst &
 bluetoothctl power on && bluetoothctl pairable on
 picom &
+eww open greeter &
