@@ -1,0 +1,20 @@
+
+      (box
+        :class "p"
+        :halign "start"
+        (label
+          :wrap true
+          :xalign 0
+          :text "Current temp at Lille is 23.5C. Sunny weather is expected. 133 436 new covid cases."
+        ))
+
+      (box
+        :class "caption"
+        :halign "start"
+        :orientation "h"
+        :space-evenly false
+        :spacing 30
+        (label :text "14 ")
+        (label :text "2 ")
+        (label :text "12 ")
+        (label :text "1 "))

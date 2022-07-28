@@ -19,11 +19,10 @@
 
 .greeter .p {
 	font-size: 18px;
-	padding-right: 150px;
 }
 
 .greeter .caption {
-	font-size: 14px;
+	font-size: 18px;
 }
 
 .greeter .time {
@@ -31,3 +30,23 @@
 	font-weight: bold;
 }
 
+.greeter .day {
+    background-color: #f99f99;
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 10px; 
+}
+
+.greeter .main-wrapper {
+    padding: 50px;
+}
+
+.greeter .dialog {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.greeter .user-pic {
+    border-radius: 20px;
+    background-color: #15172A;
+}

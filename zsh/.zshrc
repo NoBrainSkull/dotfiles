@@ -1,4 +1,6 @@
-. /opt/asdf-vm/asdf.sh # You may use asdf plugin when you'll have a zsh framework
+
+# EDITOR
+export EDITOR=nvim
 
 # HISTORY
 export HISTFILE=~/.histfile
@@ -65,3 +67,4 @@ wal -R -n -q
 # Custom envars
 export ERL_AFLAGS="-kernel shell_history enabled" # Iex (erl) history
 export PATH="/home/no_brain_skull/.local/bin:$PATH"
+export PATH="/home/no_brain_skull/.cache/rebar3/bin:$PATH"
