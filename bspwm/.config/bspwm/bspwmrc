@@ -1,10 +1,9 @@
 #! /bin/sh
 
 ## STARTUP ##
-start-if-not-running sxhkd
-#start-if-not-running configure-monitors
-#start-if-not-running no-beep
-#start-if-not-running numlockx
+#configure-monitors
+#no-beep
+#numlockx
 
 case $(cat /proc/sys/kernel/hostname | awk '{print tolower($0)}') in
 	# Use multiple monitors on my main computer
@@ -19,7 +18,7 @@ case $(cat /proc/sys/kernel/hostname | awk '{print tolower($0)}') in
 		;;
 esac
 
-pgrep -x sxhkd > /dev/null || sxhkd &
+pgrep -x sxhkd > /dev/null || sxhkd -m -1 &
 
 ## RICE
 bspc config border_width       5 

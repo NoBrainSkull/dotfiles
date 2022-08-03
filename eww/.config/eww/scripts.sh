@@ -31,7 +31,7 @@ day_of_week () {
 
 # Fetch time as a json struct
 current_time () {
-    date +'{"hour":"%H","min":"%M","sec":"%S","pretty":"%a, %e %b","day":"%A","month":"%B","dom":"%e","year":"%Y","timestamp":"%Y%m%d%H%M"}'
+    date +'{"hour":"%H","min":"%M","sec":"%S","pretty":"%a, %e %b","day":"%A","month":"%B","dom":"%e","year":"%Y","timestamp":"%Y%m%d.%H%M"}'
 }
 
 # Quote of the day
