@@ -34,7 +34,7 @@ end
 -- you have to manually specify the entrypoint cmd for elixir-ls
 local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
 require('lspconfig').elixirls.setup {
-  cmd = { "/usr/lib/elixir-ls/language_server.sh" },
+  cmd = { "/home/no_brain_skull/src/elixir-ls/release/language_server.sh" },
   on_attach = on_attach,
   capabilities = capabilities,
   settings = {
