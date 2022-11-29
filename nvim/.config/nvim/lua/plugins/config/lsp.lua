@@ -14,7 +14,7 @@ end
 -- Installing on you system : still easy through AUR if you run arch. Should run 1 instance only.
 
 -- I mutualized mapping for the on_attach callback
-local keymaps = require('keymaps')
+local remaps = require('remap')
 local lspconfig = require('lspconfig')
 local cmp = require('cmp')
 
@@ -24,26 +24,26 @@ local cmp = require('cmp')
 
   lspconfig.elixirls.setup {
     cmd = { "/home/no_brain_skull/src/elixir-ls/release/language_server.sh" },
-    on_attach = keymaps.custom_attach,
+    on_attach = remaps.custom_attach,
     capabilities = capabilities
   }
 --end
 
 -- TYPESCRIPT
 lspconfig.tsserver.setup {
-  on_attach = keymaps.custom_attach,
+  on_attach = remaps.custom_attach,
   filetypes = { "typescript", "typescript.tsx", "typescriptvue" },
   cmd = { "typescript-language-server", "--stdio" }
 }
 
 -- PYTHON
 require'lspconfig'.pyright.setup{
-  on_attach = keymaps.custom_attach
+  on_attach = remaps.custom_attach
 }
 
 -- LUA
 lspconfig.sumneko_lua.setup {
-  on_attach = keymaps.custom_attach,
+  on_attach = remaps.custom_attach,
   settings = {
     Lua = {
       diagnostics = {
@@ -67,6 +67,6 @@ require('rust-tools').setup {
     },
   },
   server = {
-    on_attach = keymaps.custom_attach
+    on_attach = remaps.custom_attach
   }
 }

@@ -5,6 +5,16 @@ return require('packer').startup({function(use)
   use { "catppuccin/nvim", as = "catppuccin" }
   -- Neovim-Lua basic helpers
   use { 'nvim-lua/plenary.nvim' }
+
+  -- git blame
+  use 'f-person/git-blame.nvim'
+
+  -- comments
+  use { "terrortylor/nvim-comment", as = "nvim_comment", run=function() require('nvim_comment').setup() end }
+
+  -- os clipboard
+  use { "ojroques/vim-oscyank" }
+
   
 
   -- UI Plugins

@@ -19,6 +19,7 @@ set.startofline=true
 set.incsearch=true
 set.hidden=true
 set.scrolloff=5
+set.autochdir=false
 
 -- Syntax
 set.tabstop=2
