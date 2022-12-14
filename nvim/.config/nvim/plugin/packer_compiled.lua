@@ -80,183 +80,60 @@ _G.packer_plugins = {
     url = "https://github.com/catppuccin/nvim"
   },
   ["cmp-buffer"] = {
-    after_files = { "/home/no_brain_skull/.local/share/nvim/site/pack/packer/opt/cmp-buffer/after/plugin/cmp_buffer.lua" },
-    load_after = {
-      ["nvim-cmp"] = true
-    },
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/opt/cmp-buffer",
+    loaded = true,
+    path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/start/cmp-buffer",
     url = "https://github.com/hrsh7th/cmp-buffer"
   },
   ["cmp-cmdline"] = {
-    after_files = { "/home/no_brain_skull/.local/share/nvim/site/pack/packer/opt/cmp-cmdline/after/plugin/cmp_cmdline.lua" },
-    load_after = {
-      ["nvim-cmp"] = true
-    },
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/opt/cmp-cmdline",
+    loaded = true,
+    path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
     url = "https://github.com/hrsh7th/cmp-cmdline"
   },
-  ["cmp-emoji"] = {
-    after_files = { "/home/no_brain_skull/.local/share/nvim/site/pack/packer/opt/cmp-emoji/after/plugin/cmp_emoji.lua" },
-    load_after = {
-      ["nvim-cmp"] = true
-    },
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/opt/cmp-emoji",
-    url = "https://github.com/hrsh7th/cmp-emoji"
-  },
   ["cmp-nvim-lsp"] = {
-    after = { "cmp-vsnip", "nvim-lspconfig" },
-    after_files = { "/home/no_brain_skull/.local/share/nvim/site/pack/packer/opt/cmp-nvim-lsp/after/plugin/cmp_nvim_lsp.lua" },
-    load_after = {
-      ["nvim-cmp"] = true
-    },
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/opt/cmp-nvim-lsp",
+    loaded = true,
+    path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
-  ["cmp-nvim-lua"] = {
-    after_files = { "/home/no_brain_skull/.local/share/nvim/site/pack/packer/opt/cmp-nvim-lua/after/plugin/cmp_nvim_lua.lua" },
-    load_after = {
-      ["nvim-cmp"] = true
-    },
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/opt/cmp-nvim-lua",
-    url = "https://github.com/hrsh7th/cmp-nvim-lua"
-  },
-  ["cmp-omni"] = {
-    after_files = { "/home/no_brain_skull/.local/share/nvim/site/pack/packer/opt/cmp-omni/after/plugin/cmp_omni.lua" },
-    load_after = {
-      ["nvim-cmp"] = true
-    },
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/opt/cmp-omni",
-    url = "https://github.com/hrsh7th/cmp-omni"
-  },
   ["cmp-path"] = {
-    after_files = { "/home/no_brain_skull/.local/share/nvim/site/pack/packer/opt/cmp-path/after/plugin/cmp_path.lua" },
-    load_after = {
-      ["nvim-cmp"] = true
-    },
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/opt/cmp-path",
+    loaded = true,
+    path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
   ["cmp-vsnip"] = {
-    after_files = { "/home/no_brain_skull/.local/share/nvim/site/pack/packer/opt/cmp-vsnip/after/plugin/cmp_vsnip.vim" },
-    load_after = {
-      ["cmp-nvim-lsp"] = true
-    },
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/opt/cmp-vsnip",
+    loaded = true,
+    path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
-  ["git-blame.nvim"] = {
+  ["mason-lspconfig.nvim"] = {
     loaded = true,
-    path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/start/git-blame.nvim",
-    url = "https://github.com/f-person/git-blame.nvim"
+    path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    url = "https://github.com/williamboman/mason-lspconfig.nvim"
   },
-  ["git.nvim"] = {
+  ["mason.nvim"] = {
     loaded = true,
-    path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/start/git.nvim",
-    url = "https://github.com/dinhhuy258/git.nvim"
-  },
-  ["gitsigns.nvim"] = {
-    loaded = true,
-    path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
-    url = "https://github.com/lewis6991/gitsigns.nvim"
-  },
-  ["lspkind-nvim"] = {
-    after = { "nvim-cmp" },
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/opt/lspkind-nvim",
-    url = "https://github.com/onsails/lspkind-nvim"
-  },
-  ["lualine.nvim"] = {
-    config = { "require('plugins.config.lualine')" },
-    loaded = true,
-    path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/start/lualine.nvim",
-    url = "https://github.com/nvim-lualine/lualine.nvim"
-  },
-  ["markdown-preview.nvim"] = {
-    loaded = true,
-    path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
-    url = "https://github.com/iamcco/markdown-preview.nvim"
-  },
-  ["null-ls.nvim"] = {
-    loaded = true,
-    path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
-    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+    path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
   },
   ["nvim-autopairs"] = {
-    config = { " require('plugins.config.autopairs') " },
+    config = { "\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
     loaded = true,
     path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-cmp"] = {
-    after = { "cmp-buffer", "cmp-cmdline", "cmp-emoji", "cmp-nvim-lua", "cmp-omni", "cmp-nvim-lsp", "cmp-path" },
-    config = { "require('plugins.config.cmp')" },
-    load_after = {
-      ["lspkind-nvim"] = true
-    },
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/opt/nvim-cmp",
+    loaded = true,
+    path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
-  ["nvim-colorizer.lua"] = {
-    loaded = true,
-    path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
-    url = "https://github.com/norcalli/nvim-colorizer.lua"
-  },
   ["nvim-lspconfig"] = {
-    config = { "require('plugins.config.lsp')" },
-    load_after = {
-      ["cmp-nvim-lsp"] = true
-    },
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/opt/nvim-lspconfig",
+    loaded = true,
+    path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
-  ["nvim-notify"] = {
-    loaded = true,
-    path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/start/nvim-notify",
-    url = "https://github.com/rcarriga/nvim-notify"
-  },
   ["nvim-treesitter"] = {
-    config = { "require('plugins.config.treesitter')" },
     loaded = true,
     path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
-  },
-  ["nvim-ts-autotag"] = {
-    config = { " require('plugins.config.autotags') " },
-    loaded = true,
-    path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
-    url = "https://github.com/windwp/nvim-ts-autotag"
-  },
-  ["nvim-web-devicons"] = {
-    loaded = true,
-    path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
-    url = "https://github.com/kyazdani42/nvim-web-devicons"
-  },
-  nvim_comment = {
-    loaded = true,
-    path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/start/nvim_comment",
-    url = "https://github.com/terrortylor/nvim-comment"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -268,16 +145,6 @@ _G.packer_plugins = {
     path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["rust-tools.nvim"] = {
-    loaded = true,
-    path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
-    url = "https://github.com/simrat39/rust-tools.nvim"
-  },
-  ["telescope-file-browser.nvim"] = {
-    loaded = true,
-    path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
-    url = "https://github.com/nvim-telescope/telescope-file-browser.nvim"
-  },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
     path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
@@ -287,11 +154,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
-  },
-  ["typescript.nvim"] = {
-    loaded = true,
-    path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/start/typescript.nvim",
-    url = "https://github.com/jose-elias-alvarez/typescript.nvim"
   },
   ["vim-signify"] = {
     loaded = false,
@@ -309,42 +171,19 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/start/vim-vsnip-integ",
     url = "https://github.com/hrsh7th/vim-vsnip-integ"
-  },
-  ["which-key.nvim"] = {
-    config = { "\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0" },
-    loaded = true,
-    path = "/home/no_brain_skull/.local/share/nvim/site/pack/packer/start/which-key.nvim",
-    url = "https://github.com/folke/which-key.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: which-key.nvim
-time([[Config for which-key.nvim]], true)
-try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
-time([[Config for which-key.nvim]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-require('plugins.config.treesitter')
-time([[Config for nvim-treesitter]], false)
--- Config for: lualine.nvim
-time([[Config for lualine.nvim]], true)
-require('plugins.config.lualine')
-time([[Config for lualine.nvim]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
- require('plugins.config.autopairs') 
+try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
 time([[Config for nvim-autopairs]], false)
--- Config for: nvim-ts-autotag
-time([[Config for nvim-ts-autotag]], true)
- require('plugins.config.autotags') 
-time([[Config for nvim-ts-autotag]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
 vim.cmd [[au BufEnter * ++once lua require("packer.load")({'vim-signify'}, { event = "BufEnter *" }, _G.packer_plugins)]]
-vim.cmd [[au VimEnter * ++once lua require("packer.load")({'lspkind-nvim'}, { event = "VimEnter *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 

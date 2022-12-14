@@ -38,7 +38,7 @@ function module.custom_attach(client, bufnr)
     nnoremap('H', vim.lsp.buf.hover, opts)
   end
 
-  if client.resolved_capabilities.document_formatting then
+  if client.server_capabilities.document_formatting then
     nnoremap('gf', vim.lsp.buf.formatting_sync, opts)
   end
 end
