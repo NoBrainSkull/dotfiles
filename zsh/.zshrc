@@ -55,6 +55,7 @@ zplugin light zsh-users/zsh-history-substring-search
 alias g=git
 alias y=yarn
 alias sysup="paru -Syu --noconfirm"
+alias v=nvim
 
 # Custom key binding
 bindkey '^[[A' 		history-substring-search-up
