@@ -20,6 +20,7 @@ return require('packer').startup(function()
 		run = 'cmake -S? -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build --config Release && cmake --install build --prefix build'
 	}
 	use { "nvim-telescope/telescope.nvim", tag = "0.1.0", requires = { { "nvim-lua/plenary.nvim" } } }
+	use('mbbill/undotree')
 
 
 	-- Intel GUI
