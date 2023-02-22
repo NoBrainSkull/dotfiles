@@ -32,6 +32,7 @@ bindkey "^[[1;5D" backward-word
 bindkey "^[[3~" delete-char
 
 ## ALIASES
+alias config="cd ~/.config"
 alias g=git
 alias y=yarn
 alias docomp=docker-compose

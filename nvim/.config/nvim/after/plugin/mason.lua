@@ -13,8 +13,8 @@ local on_attach = function(client, bufnr)
 	nnoremap("<leader>S", vim.lsp.buf.signature_help)
 	nnoremap("<leader>D", vim.lsp.buf.type_definition)
 	nnoremap("rn", vim.lsp.buf.rename)
-	nnoremap("ca", vim.lsp.buf.code_action)
-	nnoremap("gr", vim.lsp.buf.references)
+	nnoremap("<leader>ca", vim.lsp.buf.code_action)
+	nnoremap("<leader>gr", vim.lsp.buf.references)
 	nnoremap("<leader>F", function() vim.lsp.buf.format { async = true } end)
 end
 
