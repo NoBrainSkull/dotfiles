@@ -23,8 +23,9 @@ return require('packer').startup(function()
 	use('mbbill/undotree')
 
 
-	-- Intel GUI
+	-- GUI
 	use { "mhinz/vim-signify", event = "BufEnter" }
+	use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
 	-- Completion
 	use { "hrsh7th/cmp-path" }
