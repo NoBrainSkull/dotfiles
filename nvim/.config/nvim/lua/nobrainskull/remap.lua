@@ -45,6 +45,7 @@ vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
+vim.keymap.set("n", "<leader>l", "<cmd>! yarn lint --fix %<CR>")
 
 -- replace current word
 vim.keymap.set('n', '<leader>s', ":%s/\\<<C-R><C-w>\\>/<C-R><C-w>/gI<Left><Left><Left>")
