@@ -11,25 +11,17 @@ vim.o.completeopt = "menuone,noinsert,noselect"
 local on_attach = function(client, bufnr)
 	local nnoremap = bind('n', { noremap = true, silent = true, buffer = bufnr })
 
-
-	if client.name == "rust_analyzer" then
-		notify("loading rust config")
-		-- Hover actions
-		nnoremap("<C-space>", rt.hover_actions.hover_actions)
-		-- Code action groups
-		nnoremap("<Leader>a", rt.code_action_group.code_action_group)
-	else
-		nnoremap("gD", vim.lsp.buf.declaration)
-		nnoremap("gd", vim.lsp.buf.definition)
-		nnoremap("<leader>H", vim.lsp.buf.hover)
-		nnoremap("gi", vim.lsp.buf.implementation)
-		nnoremap("<leader>S", vim.lsp.buf.signature_help)
-		nnoremap("<leader>D", vim.lsp.buf.type_definition)
-		nnoremap("<leader>rn", vim.lsp.buf.rename)
-		nnoremap("<leader>ca", vim.lsp.buf.code_action)
-		nnoremap("<leader>gr", vim.lsp.buf.references)
-		nnoremap("<leader>F", function() vim.lsp.buf.format { async = true } end)
-	end
+	nnoremap("gD", vim.lsp.buf.declaration)
+	nnoremap("gd", vim.lsp.buf.definition)
+	nnoremap("<leader>H", vim.lsp.buf.hover)
+	nnoremap("gi", vim.lsp.buf.implementation)
+	nnoremap("<leader>S", vim.lsp.buf.signature_help)
+	nnoremap("<leader>e", vim.diagnostic.open_float)
+	nnoremap("<leader>D", vim.lsp.buf.type_definition)
+	nnoremap("rn", vim.lsp.buf.rename)
+	nnoremap("<leader>ca", vim.lsp.buf.code_action)
+	nnoremap("<leader>gr", vim.lsp.buf.references)
+	nnoremap("<leader>F", function() vim.lsp.buf.format { async = true } end)
 end
 
 mason.setup()

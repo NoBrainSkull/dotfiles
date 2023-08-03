@@ -17,7 +17,8 @@ return require('packer').startup(function()
 
 	-- Navigation
 	use { "nvim-telescope/telescope-fzf-native.nvim",
-		run = 'cmake -S? -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build --config Release && cmake --install build --prefix build'
+		run =
+		'cmake -S? -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build --config Release && cmake --install build --prefix build'
 	}
 	use { "nvim-telescope/telescope.nvim", tag = "0.1.0", requires = { { "nvim-lua/plenary.nvim" } } }
 	use('mbbill/undotree')
@@ -58,25 +59,20 @@ return require('packer').startup(function()
 	use { "windwp/nvim-ts-autotag", run= function()
 		require('nvim-ts-autotag').setup()
 	end}
-	use { "nvim-treesitter/nvim-treesitter", {
+	use { "nvim-treesitter/nvim-treesitter", 
 		run = function()
 			local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
 			ts_update()
 		end
-	} }
+	}
 	use { "windwp/nvim-autopairs",
 		config = function() require("nvim-autopairs").setup {} end
 	}
 
-	-- PG Client
-	--use { "MunifTanjim/nui.nvim" }
-	--use { "guysherman/pg.nvim" }
-
-	-- ORG Mode
-	use { 'nvim-orgmode/orgmode', config = function()
-		require('orgmode').setup {}
-	end }
-
 	-- Rust tools
 	use 'simrat39/rust-tools.nvim'
+	use { 'nvim-orgmode/orgmode', config = function()
+		require('orgmode').setup {}
+	end
+	}
 end)

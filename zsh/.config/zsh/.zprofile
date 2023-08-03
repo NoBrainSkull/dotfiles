@@ -1,4 +1,5 @@
-if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-  exec startx &> /dev/null
-fi
+sh hyprland.sh && echo "goodbye, now logging out" && exit 0 \
+ || echo "$? hyperland.sh failed" && tty |grep tty1 \
+  && echo "refusing autologin without hyprland on tty1" && exit 0 \
+  || echo "not on tt1, letting in"
 

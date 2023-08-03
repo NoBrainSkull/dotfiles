@@ -8,8 +8,14 @@ eval "$(sheldon source)"
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
+# Doom Emacs
+export PATH="/$HOME/.config/emacs/bin/:$PATH"
+
 # ASDF (the last version manager)
 . /opt/asdf-vm/asdf.sh
+
+# OPAM (Ocamel packacke manager)
+[[ ! -r /home/no_brain_skull/.opam/opam-init/init.zsh ]] || source /home/no_brain_skull/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
 ## ZSH OPTIONS
 #setopt INC_APPEND_HISTORY

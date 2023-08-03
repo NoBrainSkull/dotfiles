@@ -49,3 +49,6 @@ vim.keymap.set("n", "<leader>l", "<cmd>! yarn lint --fix %<CR>")
 
 -- replace current word
 vim.keymap.set('n', '<leader>s', ":%s/\\<<C-R><C-w>\\>/<C-R><C-w>/gI<Left><Left><Left>")
+
+-- exit terminal mode
+vim.keymap.set('t', '<C-space>', '<C-\\><C-n><C-w>h', {silent = true})
