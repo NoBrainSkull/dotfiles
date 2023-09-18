@@ -7,6 +7,9 @@ PATH="${PATH}:${HOME}/.local/bin/"
 EDITOR="nvim"
 VISUAL="nvim"
 MANPAGER='nvim +Man!'
+TERMINAL='kitty'
+FLYCTL_INSTALL="/home/no_brain_skull/.fly"
+PATH="$FLYCTL_INSTALL/bin:$PATH"
 
 # NVM
 NVM_DIR="$XDG_CONFIG_HOME/nvm"

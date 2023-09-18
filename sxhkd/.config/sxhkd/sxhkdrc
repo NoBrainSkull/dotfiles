@@ -141,13 +141,19 @@ super + {h,j,k,l}
 # Utils
 #
 
+Next
+    volumeControl down
+
+Prior
+    volumeControl up
+
 # take a screenshot
 Print
     flameshot gui
 XF86AudioRaiseVolume
-    volumeControl up
+    volumeControl mute
 XF86AudioLowerVolume
-    volumeControl down
+		pactl set-source-mute alsa_input.usb-FongLun_USB_Microphone_201605-00.analog-stereo toggle
 XF86AudioMute
     volumeControl mute
 XF86AudioStop
