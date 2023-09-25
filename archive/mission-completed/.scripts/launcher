@@ -1,3 +1,0 @@
-#!/bin/sh
-
-rofi -modi drun -show drun -display-drun "" -theme ~/.config/rofi/launcher.rasi

@@ -2,8 +2,8 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/no_brain_skull/.gtkrc-2.0.mine"
-gtk-theme-name="Orchis-pink-dark"
-gtk-icon-theme-name="BeautyLine"
+gtk-theme-name="Adwaita:dark"
+gtk-icon-theme-name="Adwaita:dark"
 gtk-font-name="Cantarell 11"
 gtk-cursor-theme-name="phinger-cursors-light"
 gtk-cursor-theme-size=0
