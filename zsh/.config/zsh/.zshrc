@@ -11,6 +11,9 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # Doom Emacs
 export PATH="/$HOME/.config/emacs/bin/:$PATH"
 
+# IEX history
+export ERL_AFLAGS="-kernel shell_history enabled"
+
 # ASDF (the last version manager)
 . /opt/asdf-vm/asdf.sh
 
