@@ -1,0 +1,74 @@
+(defpoll main :interval "1s" `/home/no_brain_skull/bin/fetch.sh > /home/no_brain_skull/bin/data.txt`)
+(defpoll date :interval "1s" `/home/no_brain_skull/bin/fetch.sh | awk -F ";" '{print $1}'`)
+(defpoll time :interval "1s" `/home/no_brain_skull/bin/fetch.sh | awk -F ";" '{print $2}'`)
+(defpoll moment :interval "1s" `/home/no_brain_skull/bin/fetch.sh | awk -F ";" '{print $3}'`)
+(defpoll next_e :interval "1s" `/home/no_brain_skull/bin/fetch.sh | awk -F ";" '{print $4}'`)
+(defpoll timer :interval "1s" `/home/no_brain_skull/bin/fetch.sh | awk -F ";" '{print $5}'`)
+(defpoll headset :interval "1s" `/home/no_brain_skull/bin/fetch.sh | awk -F ";" '{print $6}'`)
+(defpoll mic :interval "1s" `/home/no_brain_skull/bin/fetch.sh | awk -F ";" '{print $7}'`)
+
+(defwindow hud_frame
+	:monitor 1
+	:stacking "bg"
+	:windowtype "normal"
+	:wm-ignore true
+	:geometry (geometry 
+							:width "100%"
+							:height "100%")
+	(frame))
+
+(defwindow hud_board
+	:monitor 1
+	:stacking "fg"
+	:windowtype "normal"
+	:wm-ignore true
+	:geometry (geometry 
+							:width "200px"
+							:height "40px")
+	(board))
+
+(defwidget frame []
+	(box :orientation "v" :class "hud-frame"))
+
+(defwidget board []
+	(box :orientation "v" :space-evenly false :class "hud-board-layout" :spacing 10
+		(box 
+			:orientation "h" 
+			:class "hud-board"
+			:space-evenly false
+				(box :orientation "h" :space-evenly false
+					;; yellow-bloc
+					(box :orientation "h" :space-evenly false 
+						(image :path "/home/no_brain_skull/bin/ybloc.png" :image-height 40)
+						(label :class "caption" :angle 90 :text date))
+					(box :orientation "h" :space-evenly false :spacing 10 :class "bx"
+						;; text
+						(box :orientation "v" :class "bx" :space-evenly false :halign "center"  :valign "center"
+							(label :class "text" :text moment)
+							(label :class "caption" :xalign 1 :text next_e))
+						;; screen
+						(box :orientation "h" :space-evenly false :halign "center" :class "screen" :spacing 2
+							(label :class "timer" :text timer)
+							(image :path "/home/no_brain_skull/bin/icon_on.png")))
+					;; yellow-bloc
+					(box :orientation "h" :space-evenly false :halign "end"
+						(label :class "caption" :angle 90 :text time)
+						(image :path "/home/no_brain_skull/bin/ybloc.png" :image-height 40)))
+			)
+		(box :orientation "h" :space-evenly false :spacing 10
+			(box :space-evenly false :class "button" 
+				(image :path "/home/no_brain_skull/bin/icon_off.png" :image-height 20))
+			(box 
+				:space-evenly false 
+				:class {headset == "hs_on" ? "button" : "button disabled"} 
+				(image 
+					:path {headset == "hs_on" ? "/home/no_brain_skull/bin/icon_headset.png" : "/home/no_brain_skull/bin/icon_headset_dis.png"} 
+					:image-height 20))
+			(box 
+				:space-evenly false 
+				:class {mic == "mic_on" ? "button" : "button disabled"} 
+				(image 
+					:path {mic == "mic_on" ? "/home/no_brain_skull/bin/icon_mic.png" : "/home/no_brain_skull/bin/icon_mic_mute.png"} 
+					:class {mic == "mic_on" ? "" : "/home/no_brain_skull/bin/icon_mic_mute.png"} 
+					:image-height 20))))
+)

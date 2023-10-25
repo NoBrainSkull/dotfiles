@@ -1,0 +1,58 @@
+* {
+	all: unset;
+}
+
+.hud-frame {
+	border: 1px solid;
+	border-color: #ebcb8b;
+	margin: 0.5rem;
+}
+
+.hud-board-layout {
+	margin: 1.5rem 0 0.5rem 1.5rem;
+}
+
+.hud-board{
+	background-color: #2E3440;
+	border: 2px solid;
+	border-color: #ebcb8b;
+	border-radius: 0.5rem;
+	color: #ebcb8b;
+}
+
+.hud-board .screen {
+	background-color: #382807;
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+}
+
+.hud-board .text{
+	font-size: 22px;
+}
+
+.button {
+	background-color: #ebcb8b;
+	border: 1px solid;
+	border-color: #ebcb8b;
+	border-radius: 0.5rem;
+	font-size: 14px;
+	color: #2e3440;
+	padding: 0.5rem 1rem;
+}
+
+.button.disabled{
+	opacity: 0.7;
+}
+
+.caption {
+	font-size: 12px;
+}
+
+.bx {
+	margin: 0 1rem;
+	padding: 0;
+}
+
+.timer {
+	font-size: 22;
+}
