@@ -1,0 +1,65 @@
+* High impact targets
+** Things I see the most :
++ terminal
++ wm (border, spaces)
++ app launcher
++ login page
+
+** In terminal :
++ nvim
++ git
++ db client
+
+** Apps I use the most
++ Telegram
++ Firefox
++ Spotify
++ Discord
++ file browering
++ Scan
++ Pavucontrol
+
+** As webapps
++ mailing
++ g drive
+
+** scores
+	 usage | space | score
+	 ------|-------|------
+	 Terminal | env   | 100
+	 Wm (border, spaces) | env | 100
+	 status bar ? | env | 100
+	 Nvim | terminal | 100
+	 App launcher | env | 90
+	 Login page | env | 80
+	 Telegram | wm | 80
+	 Firefox | wm | 80
+	 Db client | terminal | 60
+	 Spotify | wm | 60
+	 Mailing | webapp/terminal | 60
+	 File browering | wm/terminal | 60
+	 Pavucontrol | wm | 50
+	 G drive | webapp/terminal | 50
+	 Git | terminal | 40
+	 Discord | wm | 40
+	 Scan | wm | 40
+
+
+* Ideas for better config
++ keybindings isolated from wm config
++ emacs for org
++ configure both emacs and nvim as daemon
++ centralized colors system
++ place scripts in ~/bin ?
+
+* Ideas for better workflow
++ speech to text transcription
++ focus mode (center windows on big screen)
++ make text expanser a main tool of the wf
+
+* General intel
+** Terminal colors
+ 	type | black|	red|	green|	yellow|	blue|	magenta|	cyan|	white
+	-----|-----|-------|--------|-----|--------|------|------
+	dark |	00|	01|	02|	03|	04|	05|	06|	07
+	light|	08|	09|	10|	11|	12|	13|	14|	15

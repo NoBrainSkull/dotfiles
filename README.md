@@ -21,3 +21,8 @@ mkdir eww/.config -p # creating structure to deploy in home
 mv ~/.config/eww ./eww/.config # dumping existing into dotfiles
 stow eww # effectively symlinking
 ```
+
+## TODO
+* Fresh Install script
+* Expanso on-the-fly configurator
+* Update rice

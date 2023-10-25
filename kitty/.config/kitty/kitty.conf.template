@@ -3,76 +3,76 @@ allow_remote_control no
 
 
 # The basic colors
-foreground							 #e5e9f0 
-background               #2e3440
-selection_foreground     #4c566a
-selection_background     #ebcb8b
+foreground							##!color_7!# 
+background              ##!color_0!#
+selection_foreground    ##!color_8!#
+selection_background    ##!color_3!#
 
 # Cursor colors
-cursor                   #ebcb8b
-cursor_text_color        #2e3440
+cursor                  ##!color_3!#
+cursor_text_color       ##!color_0!#
 
 # URL underline color when hovering with mouse
-url_color                #b48ead
+url_color               ##!color_5!#
 url_style								"double"
 
 # Kitty window border colors
-active_border_color      #b48ead
-inactive_border_color    #a3be8c
-bell_border_color        #ebcb8b
+active_border_color     ##!color_13!#
+inactive_border_color   ##!color_2!#
+bell_border_color       ##!color_11!#
 
 # OS Window titlebar colors
 wayland_titlebar_color system
 macos_titlebar_color system
 
 # Tab bar colors
-active_tab_foreground    #88c0d0
-active_tab_background    #2e3440
-inactive_tab_foreground  #88c0d0
-inactive_tab_background  #2e3440
-tab_bar_background       #bf616a
+active_tab_foreground   ##!color_4!#
+active_tab_background   ##!color_0!#
+inactive_tab_foreground ##!color_4!#
+inactive_tab_background ##!color_0!#
+tab_bar_background      ##!color_1!#
 
 # Colors for marks (marked text in the terminal)
-mark1_foreground  #e5e9f0
-mark1_background  #4c566a
-mark2_foreground  #bf616a
-mark2_background  #a3be8c
-mark3_foreground  #ebcb8b
-mark3_background  #88c0d0
+mark1_foreground ##!color_7!#
+mark1_background ##!color_8!#
+mark2_foreground ##!color_9!#
+mark2_background ##!color_10!#
+mark3_foreground ##!color_11!#
+mark3_background ##!color_12!#
 
 # The 16 terminal colors
 
 # black
-color0  #2e3440
-color8  #4c566a
+color0 ##!color_0!#
+color8 ##!color_8!#
 
 # red
-color1  #bf616a
-color9  #bf616a
+color1 ##!color_1!#
+color9 ##!color_9!#
 
 # green
-color2   #a3be8c
-color10  #a3be8c
+color2  ##!color_2!#
+color10 ##!color_10!#
 
 # yellow
-color3   #ebcb8b
-color11  #ebcb8b
+color3  ##!color_3!#
+color11 ##!color_11!#
 
 # blue
-color4   #88c0d0
-color12  #88c0d0
+color4  ##!color_4!#
+color12 ##!color_12!#
 
 # magenta
-color5   #b48ead
-color13  #b48ead
+color5  ##!color_5!#
+color13 ##!color_13!#
 
 # cyan
-color6   #8fbcbb
-color14  #8fbcbb
+color6  ##!color_6!#
+color14 ##!color_14!#
 
 # white
-color7   #e5e9f0
-color15  #eceff4
+color7  ##!color_7!#
+color15 ##!color_15!#
 
 
 

@@ -5,6 +5,7 @@
 * {
     /* CUSTOM VARS */
     yellow:			 rgba(194, 148, 46, 100%);
+    white:			 rgba(250, 250, 250, 100%);
     foreground:			 var(yellow);
     background:			 rgba ( 31, 0, 31, 100 % );
     list-background:		 rgba(0,5,15, 100%);
@@ -35,12 +36,12 @@ element {
     padding: 15px ;
     cursor:  pointer;
     spacing: 15px ;
-    border-radius: 5px;
     border:  0;
 }
 element .normal {
-    background-color: var(normal-background);
-    text-color:       var(normal-foreground);
+    background-color: transparent;
+		border:	1;
+		text-color:       var(normal-foreground);
 }
 element .urgent {
     background-color: var(urgent-background);
@@ -79,13 +80,12 @@ window {
     width:	     1150px; 
     padding:          0;
     border:	      0px;
-    background-color: var(background);
+		font: "Mono Bold All-Small-Caps 11";
 }
 mainbox {
     background-image: url("~/dotfiles/assets/cover.jpg");
     padding: 200px 0px 0 0px;
     border:  0px;
-    border-color: transparent;
 }
 message {
     padding:      1px ;
@@ -140,14 +140,12 @@ textbox-num-sep {
     text-color: Gray;
 }
 inputbar {
-    border: 0 160px;
-    border-color: transparent;
-    background-color: var(background);
+    background-color: transparent;
     marging: 	0 50px;
-    padding:	20px 25px;
+    padding:	50px 225px;
     spacing:    0px ;
-    border-radius:	20px;
     text-color: var(normal-foreground);
+		font: "Mono";
     children:   [ entry,num-filtered-rows,textbox-num-sep,num-rows,case-indicator ];
 }
 case-indicator {
@@ -155,8 +153,8 @@ case-indicator {
     text-color: var(normal-foreground);
 }
 entry {
-    
     text-color:        var(normal-foreground);
+		font: "Mono Bold All-Small-Caps 35";
     cursor:            text;
     spacing:           0;
     placeholder-color: Gray;

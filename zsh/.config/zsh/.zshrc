@@ -43,4 +43,7 @@ alias g=git
 alias y=yarn
 alias docomp=docker-compose
 alias v=nvim
+alias ls="ls --color=always"
+alias grep="grep --color=auto"
+alias o="xdg-open"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

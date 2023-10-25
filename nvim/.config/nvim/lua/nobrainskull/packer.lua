@@ -8,7 +8,7 @@ return require('packer').startup(function()
 	use { "nvim-lua/plenary.nvim" }
 
 	-- Colorscheme
-	use { "catppuccin/nvim", as = "catppuccin" }
+	use { "AlexvZyl/nordic.nvim" }
 
 	-- Tooling manager (LSP, DAP, Linters, etc.)
 	use { "williamboman/mason.nvim" }
@@ -16,11 +16,9 @@ return require('packer').startup(function()
 	use 'neovim/nvim-lspconfig'
 
 	-- Navigation
-	use { "nvim-telescope/telescope-fzf-native.nvim",
-		run =
-		'cmake -S? -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build --config Release && cmake --install build --prefix build'
-	}
-	use { "nvim-telescope/telescope.nvim", tag = "0.1.0", requires = { { "nvim-lua/plenary.nvim" } } }
+	use { "nvim-telescope/telescope.nvim", tag = "0.1.3", requires = { { "nvim-lua/plenary.nvim" } } }
+	use { 'nvim-telescope/telescope-fzf-native.nvim', run =
+	'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 	use('mbbill/undotree')
 
 
@@ -35,19 +33,20 @@ return require('packer').startup(function()
 	use({ "APZelos/blamer.nvim" })
 	use 'rcarriga/nvim-notify'
 	use({
-    "j-hui/fidget.nvim",
-    config = function()
-      require("fidget").setup()
-    end
-  })
+		"j-hui/fidget.nvim",
+		tag = "legacy",
+		config = function()
+			require("fidget").setup()
+		end
+	})
 
 
 	-- Completion
-	use { "folke/which-key.nvim", config = function ()
+	use { "folke/which-key.nvim", config = function()
 		vim.o.timeout = true
-    vim.o.timeoutlen = 300
-    require("which-key").setup {}
-	end}
+		vim.o.timeoutlen = 300
+		require("which-key").setup {}
+	end }
 	use { "hrsh7th/cmp-path" }
 	use { "hrsh7th/cmp-cmdline" }
 	use { "hrsh7th/cmp-buffer" }
@@ -56,10 +55,10 @@ return require('packer').startup(function()
 	use { "hrsh7th/vim-vsnip" }
 	use { "hrsh7th/vim-vsnip-integ" }
 	use { "hrsh7th/cmp-vsnip" }
-	use { "windwp/nvim-ts-autotag", run= function()
+	use { "windwp/nvim-ts-autotag", run = function()
 		require('nvim-ts-autotag').setup()
-	end}
-	use { "nvim-treesitter/nvim-treesitter", 
+	end }
+	use { "nvim-treesitter/nvim-treesitter",
 		run = function()
 			local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
 			ts_update()
@@ -68,6 +67,9 @@ return require('packer').startup(function()
 	use { "windwp/nvim-autopairs",
 		config = function() require("nvim-autopairs").setup {} end
 	}
+
+	-- Formatters
+	use { "mhartington/formatter.nvim" }
 
 	-- Rust tools
 	use 'simrat39/rust-tools.nvim'
