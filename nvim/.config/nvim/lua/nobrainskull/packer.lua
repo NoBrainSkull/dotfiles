@@ -54,7 +54,7 @@ return require('packer').startup(function()
 	use { "hrsh7th/nvim-cmp" }
 	use { "hrsh7th/vim-vsnip" }
 	use { "hrsh7th/vim-vsnip-integ" }
-	use { "hrsh7th/cmp-vsnip" }
+	use { "hrsh7th/cmp-vsnip", as="cmp-vsnip" }
 	use { "windwp/nvim-ts-autotag", run = function()
 		require('nvim-ts-autotag').setup()
 	end }
@@ -67,6 +67,7 @@ return require('packer').startup(function()
 	use { "windwp/nvim-autopairs",
 		config = function() require("nvim-autopairs").setup {} end
 	}
+	use { "github/copilot.vim" }
 
 	-- Formatters
 	use { "mhartington/formatter.nvim" }
